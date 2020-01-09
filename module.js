@@ -52,7 +52,7 @@ function process(block) {
         display("Logic Module: max, min, mix" + mix)
         
 		// Convert phase to sine output
-        // block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5 * amp
+        //block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5 * amp
         block.outputs[0][i] = max
         block.outputs[1][i] = min
         block.outputs[2][i] = mix
