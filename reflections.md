@@ -18,9 +18,17 @@ It keeps lik that for about 15 seconds. At 1:50, I can ear a new layer of sound,
  
  Now, I can hear just the tone.
 
-	
+
 > <img src="https://i.imgur.com/PRBBGu9.png">
 > 
 > >Lfo-1 freq results in speed changes.<br/>
 > > >The left random rate results in “aftershocks” of rhythmic content.<br/>
-> > > >VCF freq results in higher overtone-like content
+> > > >VCF freq results in higher overtone-like content  
+
+### Performing the score	  
+  While recreating the recording, I took screenshoots and recording the samples of each change of sound. 
+  
+  ![Alt Image Text](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/recording2.png "End_2:05-2:11")
+  
+  
+   
