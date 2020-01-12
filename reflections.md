@@ -40,7 +40,7 @@ At 2:05, the noise and lower frequency layer stops abruptly. Random goes back to
   >* ==LFO-1:Knob turn 1/4 CW==  
   >* ==VCF: knob turn 1/4 CW- marker at 1 pm==
   >* ==Left Random at original position==
-  ![Alt Image Text](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/screenshots/recording2.png "End_2:05-2:11")  
+  ![End of score](extensions/recording2.png "End_2:05-2:11")  
   
   In the recording.wav committed at saturday 10:35pm my recording is higher than the original and not as choatic. 
   
@@ -50,7 +50,13 @@ I used the other modules in the patch that weren't assgined in my score, and I t
 
 >> In this commit at 12:41 am, I deleted modules and attach the basics. A VCO, LFO, ADSR, Delay, VCF, Reverb
 >> I also added a noise module that I wasn't using this particular time
->>  ![Alt Image Text](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/screenshots/commit12-45.png "End_2:05-2:11")  
+>> this recording I called it, signal interference
+>>  ![Commit 12:45](extensions/commit12-45.png "Commit 12:45")  
 >> 
->> this recording is signal interference
+
+After experimenting with my new patch, I decided I wanted a noisy sound that would start very soft and starts building up with time.  
+>> In order to make it easier to practice what I have done, I recorded the screen and sound of what I was doing.  
+>>  
+>> This is the video from the score I decided to do (it matches with the commit at 5:15 pm Sunday:
 >> 
+![test video](extensions/recording4-005.mov "test video") 
