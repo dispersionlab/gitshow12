@@ -40,7 +40,7 @@ At 2:05, the noise and lower frequency layer stops abruptly. Random goes back to
   >* ==LFO-1:Knob turn 1/4 CW==  
   >* ==VCF: knob turn 1/4 CW- marker at 1 pm==
   >* ==Left Random at original position==
-  ![Alt Image Text](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/recording2.png "End_2:05-2:11")
+  ![Alt Image Text](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/screenshots/recording2.png "End_2:05-2:11")
   
   
    
