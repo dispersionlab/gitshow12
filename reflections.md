@@ -17,7 +17,7 @@ At 00:35, there is a change in the score, where the left random rate has been us
 
 Around 01:00 it starts to increase the volume and density of the piece, to then go back to the previous state.  
  
-From 1:10 to 1:30, it slowly increase the rythimic pattern and the frequency amplitude until it  peaks at around 1:35, where the sound becomes more aggressive and fast. It keeps like that for about 15 seconds. In my opinion, it needs to be taken more to an extreme that chaotic sound. It is as if the performer wnats to take it further but stays safe.  
+From 1:10 to 1:30, it slowly increase the rythimic pattern and the frequency amplitude until it  peaks at around 1:35, where the sound becomes more aggressive and fast. It keeps like that for about 15 seconds.  
 
 At 1:50, I can ear a new layer of sound, a higher pitch tone, created by controlling the VCF. Those 2 layers of sound play together until 2:05.  
 
