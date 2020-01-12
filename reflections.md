@@ -9,12 +9,19 @@
 > >Build a rhythmic pattern using the highlighted controls - culminating in noise morphing into tone.
 >   
 
+### Listening to the recording
+
 At 00:15 and 00:19 there is a high pith tone that interests me. And I am not sure how it was made. I would like to reproduce that sound following the the score rules. 
 
 At 00:35, there is a change in the score, where the left random rate has been used, creating a dense and suspensful atmosphere
 
-Around 01:00 it starts to increase the volume and density of the piece, to then go back to the previous state. From 1:10 to 1:30, it slowly increase the rythimic pattern and the frequency amplitude until its peak at around 1:35, where the sound becomes more aggressive and fast. 
-It keeps lik that for about 15 seconds. At 1:50, I can ear a new layer of sound, a higher pitch tone, created by controlling the VCF. Those 2 sounds are playing until 2:10 that the noise and lower frequency sound stops abruptly. Ranom goes back to initial position and the LFO-1 poisiton is in a higher speed that initial. 
+Around 01:00 it starts to increase the volume and density of the piece, to then go back to the previous state.  
+ 
+From 1:10 to 1:30, it slowly increase the rythimic pattern and the frequency amplitude until it  peaks at around 1:35, where the sound becomes more aggressive and fast. It keeps like that for about 15 seconds.  
+
+At 1:50, I can ear a new layer of sound, a higher pitch tone, created by controlling the VCF. Those 2 layers of sound play together until 2:05.  
+
+At 2:05, the noise and lower frequency layer stops abruptly. Random goes back to initial position (0) and the LFO-1 poisiton is in a higher speed that initial.
  
  Now, I can hear just the tone.
 
@@ -28,6 +35,11 @@ It keeps lik that for about 15 seconds. At 1:50, I can ear a new layer of sound,
 ### Performing the score	  
   While recreating the recording, I took screenshoots and recording the samples of each change of sound. 
   
+  > From 2:05 to 2:11- Changes from original 
+  
+  >* ==LFO-1:Knob turn 1/4 CW==  
+  >* ==VCF: knob turn 1/4 CW- marker at 1 pm==
+  >* ==Left Random at original position==
   ![Alt Image Text](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/recording2.png "End_2:05-2:11")
   
   
