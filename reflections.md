@@ -48,3 +48,9 @@ At 2:05, the noise and lower frequency layer stops abruptly. Random goes back to
 
 I used the other modules in the patch that weren't assgined in my score, and I tried to stick to 90 seconds. It doesn't have structure, not that it needs to have one, but I am looing for something different. this all is all over the places. 
 
+>> In this commit at 12:41 am, I deleted modules and attach the basics. A VCO, LFO, ADSR, Delay, VCF, Reverb
+>> I also added a noise module that I wasn't using this particular time
+>>  ![Alt Image Text](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/screenshots/commit12-45.png "End_2:05-2:11")  
+>> 
+>> this recording is signal interference
+>> 

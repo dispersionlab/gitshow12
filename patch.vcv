@@ -10,8 +10,7 @@
       "data": {
         "audio": {
           "driver": 5,
-          "deviceName": "Apple Inc.: Built-in Output",
-          "offset": 0,
+          "offset": 2687017,
           "maxChannels": 8,
           "sampleRate": 44100,
           "blockSize": 256
@@ -30,7 +29,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.948001206
+          "value": 1.56600142
         },
         {
           "id": 1,
@@ -62,7 +61,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.574501455
+          "value": 0.57600224
         },
         {
           "id": 1,
@@ -82,7 +81,7 @@
         }
       ],
       "pos": [
-        33,
+        18,
         1
       ]
     },
@@ -107,11 +106,11 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 1,
-          "value": 0.0
+          "value": 0.501999915
         },
         {
           "id": 2,
@@ -155,11 +154,11 @@
         }
       ],
       "data": {
-        "path": "/Users/roryhoy/Documents/gitShow/gitShow2/module2.js",
-        "script": "\nconfig.frameDivider = 1\n// set buffersize of module\nconfig.bufferSize = 16\n\nvar phase = 0\nvar amp = 1\nvar mix;\nvar bias_cv\n// clamp a number to within a range\nlet clampNumber = (num, a, b) => Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b));\n\n// this is where the synthesis calculation occurs\nfunction process(block) {\n    // block.knobs[0] = 0.5\n\t// Knob ranges from -5 to 5 octaves\n\t// var pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n    // pitch += block.inputs[0][0]\n    \n    // input 2 on the prototype module corresponds to the 2nd index of the block.inputs array, i.e. block.inputs[1]\n    amp = block.inputs[1][0]\n\n    // compare the amplitude of the two signal inputs\n    compare = [block.inputs[0][0], block.inputs[1][0]]\n    // get the max\n    max = Math.max(...compare)\n    // get the min\n    min = Math.min(...compare)\n\n    // the 1st knob on the prototype module will affect the biasing between input 1 or 2    \n    var bias = block.knobs[0] * 2 - 1\n    \n    // bias_cv += bias * Math.pow(2, block.inputs[2][0]);\n    if(bias < 0.){\n        mix = clampNumber( ((Math.abs(bias) * min) + (bias * max) * max * block.inputs[2][0]), -10., 10.)\n    } else if (bias > 0.){\n        mix = clampNumber( ((bias * max) + ((bias * -1) * min) * min * block.inputs[2][0]), -10., 10.)\n    }\n\n    var freq = 1\n\t//display(\"Freq: \" + freq.toFixed(3) + \" Hz\")\n\n\t// Set all samples in output buffer: this is where each sample is calculated, hence the for...loop. \n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n        phase %= 1\n        // this is like the console.log output of the prototype module. unfortunately it only displays a single concatenated string. \n        display(\"Logic Module: max, min, mix\" + mix)\n        \n\t\t// Convert phase to sine output\n        // block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5 * amp\n        block.outputs[0][i] = max\n        block.outputs[1][i] = min\n        block.outputs[2][i] = mix\n\t}\n}\n"
+        "path": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow12/module.js",
+        "script": "\nconfig.frameDivider = 1\n// set buffersize of module\nconfig.bufferSize = 16\n\nvar phase = 0\nvar amp = 1\nvar mix;\nvar bias_cv\n// clamp a number to within a range\nlet clampNumber = (num, a, b) => Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b));\n\n// this is where the synthesis calculation occurs\nfunction process(block) {\n    // block.knobs[0] = 0.5\n\t// Knob ranges from -5 to 5 octaves\n\t// var pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n    // pitch += block.inputs[0][0]\n    \n    // input 2 on the prototype module corresponds to the 2nd index of the block.inputs array, i.e. block.inputs[1]\n    amp = block.inputs[1][0]\n\n    // compare the amplitude of the two signal inputs\n    compare = [block.inputs[0][0], block.inputs[1][0]]\n    // get the max\n    max = Math.max(...compare)\n    // get the min\n    min = Math.min(...compare)\n\n    // the 1st knob on the prototype module will affect the biasing between input 1 or 2    \n    var bias = block.knobs[0] * 2 - 1\n    \n    // bias_cv += bias * Math.pow(2, block.inputs[2][0]);\n    if(bias < 0.){\n        mix = clampNumber( ((Math.abs(bias) * min) + (bias * max) * max * block.inputs[2][0]), -10., 10.)\n    } else if (bias > 0.){\n        mix = clampNumber( ((bias * max) + ((bias * -1) * min) * min * block.inputs[2][0]), -10., 10.)\n    }\n\n    var freq = 1\n\t//display(\"Freq: \" + freq.toFixed(3) + \" Hz\")\n\n\t// Set all samples in output buffer: this is where each sample is calculated, hence the for...loop. \n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n        phase %= 1\n        // this is like the console.log output of the prototype module. unfortunately it only displays a single concatenated string. \n        display(\"Logic Module: max, min, mix\" + mix)\n        \n\t\t// Convert phase to sine output\n        //block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5 * amp\n        block.outputs[0][i] = max\n        block.outputs[1][i] = min\n        block.outputs[2][i] = mix\n\t}\n}\n"
       },
       "pos": [
-        43,
+        45,
         1
       ]
     },
@@ -179,7 +178,7 @@
         },
         {
           "id": 2,
-          "value": 3.44799948
+          "value": -2.46500206
         },
         {
           "id": 3,
@@ -199,6 +198,7 @@
         }
       ],
       "leftModuleId": 46,
+      "rightModuleId": 44,
       "pos": [
         13,
         0
@@ -289,81 +289,23 @@
       "params": [
         {
           "id": 0,
-          "value": 1.0
+          "value": 0.181000039
         },
         {
           "id": 1,
-          "value": 0.779999554
+          "value": 0.305999696
         },
         {
           "id": 2,
-          "value": 0.835000634
+          "value": 0.376000643
         },
         {
           "id": 3,
-          "value": 0.505500197
+          "value": 0.733500123
         }
       ],
       "pos": [
         43,
-        0
-      ]
-    },
-    {
-      "id": 40,
-      "plugin": "Fundamental",
-      "version": "1.4.0",
-      "model": "Random",
-      "params": [
-        {
-          "id": 0,
-          "value": 7.11899662
-        },
-        {
-          "id": 1,
-          "value": 0.42699936
-        },
-        {
-          "id": 2,
-          "value": 1.0
-        },
-        {
-          "id": 3,
-          "value": 1.0
-        }
-      ],
-      "rightModuleId": 42,
-      "pos": [
-        27,
-        0
-      ]
-    },
-    {
-      "id": 42,
-      "plugin": "Fundamental",
-      "version": "1.4.0",
-      "model": "Random",
-      "params": [
-        {
-          "id": 0,
-          "value": 8.37470245
-        },
-        {
-          "id": 1,
-          "value": 0.24300018
-        },
-        {
-          "id": 2,
-          "value": 1.0
-        },
-        {
-          "id": 3,
-          "value": 1.0
-        }
-      ],
-      "leftModuleId": 40,
-      "pos": [
-        32,
         0
       ]
     },
@@ -375,15 +317,15 @@
       "params": [
         {
           "id": 0,
-          "value": 0.660499692
+          "value": 0.731500566
         },
         {
           "id": 1,
-          "value": 0.545499861
+          "value": 0.146499828
         },
         {
           "id": 2,
-          "value": 0.408500344
+          "value": 0.701000392
         },
         {
           "id": 3,
@@ -392,8 +334,8 @@
       ],
       "leftModuleId": 44,
       "pos": [
-        20,
-        1
+        31,
+        0
       ]
     },
     {
@@ -404,25 +346,26 @@
       "params": [
         {
           "id": 0,
-          "value": 0.31400001
+          "value": 0.751999855
         },
         {
           "id": 1,
-          "value": 0.324499905
+          "value": 0.420499921
         },
         {
           "id": 2,
-          "value": 0.595999479
+          "value": 0.742999494
         },
         {
           "id": 3,
-          "value": 0.715000153
+          "value": 0.182500347
         }
       ],
+      "leftModuleId": 27,
       "rightModuleId": 43,
       "pos": [
-        12,
-        1
+        23,
+        0
       ]
     },
     {
@@ -441,7 +384,7 @@
         },
         {
           "id": 2,
-          "value": 13.9320412
+          "value": 6.20999575
         },
         {
           "id": 3,
@@ -482,38 +425,6 @@
   ],
   "cables": [
     {
-      "id": 281,
-      "outputModuleId": 2,
-      "outputId": 0,
-      "inputModuleId": 1,
-      "inputId": 0,
-      "color": "#0986ad"
-    },
-    {
-      "id": 282,
-      "outputModuleId": 2,
-      "outputId": 0,
-      "inputModuleId": 1,
-      "inputId": 1,
-      "color": "#c9b70e"
-    },
-    {
-      "id": 342,
-      "outputModuleId": 2,
-      "outputId": 2,
-      "inputModuleId": 29,
-      "inputId": 3,
-      "color": "#c9b70e"
-    },
-    {
-      "id": 341,
-      "outputModuleId": 2,
-      "outputId": 1,
-      "inputModuleId": 29,
-      "inputId": 2,
-      "color": "#0986ad"
-    },
-    {
       "id": 346,
       "outputModuleId": 2,
       "outputId": 1,
@@ -538,14 +449,6 @@
       "color": "#c91847"
     },
     {
-      "id": 371,
-      "outputModuleId": 17,
-      "outputId": 1,
-      "inputModuleId": 2,
-      "inputId": 2,
-      "color": "#0986ad"
-    },
-    {
       "id": 374,
       "outputModuleId": 4,
       "outputId": 1,
@@ -560,14 +463,6 @@
       "inputModuleId": 17,
       "inputId": 1,
       "color": "#0986ad"
-    },
-    {
-      "id": 390,
-      "outputModuleId": 17,
-      "outputId": 2,
-      "inputModuleId": 2,
-      "inputId": 3,
-      "color": "#c9b70e"
     },
     {
       "id": 397,
@@ -594,52 +489,12 @@
       "color": "#0c8e15"
     },
     {
-      "id": 410,
-      "outputModuleId": 43,
-      "outputId": 0,
-      "inputModuleId": 32,
-      "inputId": 2,
-      "color": "#0986ad"
-    },
-    {
-      "id": 407,
-      "outputModuleId": 27,
-      "outputId": 0,
-      "inputModuleId": 2,
-      "inputId": 1,
-      "color": "#0986ad"
-    },
-    {
-      "id": 417,
-      "outputModuleId": 46,
-      "outputId": 2,
-      "inputModuleId": 44,
-      "inputId": 0,
-      "color": "#0c8e15"
-    },
-    {
-      "id": 418,
-      "outputModuleId": 46,
-      "outputId": 1,
-      "inputModuleId": 43,
-      "inputId": 0,
-      "color": "#c91847"
-    },
-    {
       "id": 406,
       "outputModuleId": 46,
       "outputId": 0,
       "inputModuleId": 27,
       "inputId": 0,
       "color": "#c91847"
-    },
-    {
-      "id": 422,
-      "outputModuleId": 48,
-      "outputId": 1,
-      "inputModuleId": 46,
-      "inputId": 1,
-      "color": "#0c8e15"
     },
     {
       "id": 426,
@@ -650,10 +505,90 @@
       "color": "#c9b70e"
     },
     {
-      "id": 427,
-      "outputModuleId": 48,
+      "id": 417,
+      "outputModuleId": 46,
+      "outputId": 3,
+      "inputModuleId": 43,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 418,
+      "outputModuleId": 46,
+      "outputId": 2,
+      "inputModuleId": 43,
+      "inputId": 1,
+      "color": "#c91847"
+    },
+    {
+      "id": 428,
+      "outputModuleId": 27,
       "outputId": 0,
-      "inputModuleId": 46,
+      "inputModuleId": 44,
+      "inputId": 3,
+      "color": "#c91847"
+    },
+    {
+      "id": 371,
+      "outputModuleId": 17,
+      "outputId": 1,
+      "inputModuleId": 2,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
+      "id": 342,
+      "outputModuleId": 2,
+      "outputId": 2,
+      "inputModuleId": 29,
+      "inputId": 3,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 341,
+      "outputModuleId": 2,
+      "outputId": 1,
+      "inputModuleId": 29,
+      "inputId": 2,
+      "color": "#0986ad"
+    },
+    {
+      "id": 281,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 0,
+      "color": "#0986ad"
+    },
+    {
+      "id": 282,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 1,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 433,
+      "outputModuleId": 17,
+      "outputId": 0,
+      "inputModuleId": 2,
+      "inputId": 2,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 410,
+      "outputModuleId": 43,
+      "outputId": 0,
+      "inputModuleId": 32,
+      "inputId": 2,
+      "color": "#0986ad"
+    },
+    {
+      "id": 434,
+      "outputModuleId": 46,
+      "outputId": 1,
+      "inputModuleId": 44,
       "inputId": 2,
       "color": "#0c8e15"
     }
