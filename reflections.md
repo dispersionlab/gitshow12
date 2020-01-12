@@ -40,7 +40,16 @@ At 2:05, the noise and lower frequency layer stops abruptly. Random goes back to
   >* ==LFO-1:Knob turn 1/4 CW==  
   >* ==VCF: knob turn 1/4 CW- marker at 1 pm==
   >* ==Left Random at original position==
-  ![Alt Image Text](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/screenshots/recording2.png "End_2:05-2:11")
+  ![Alt Image Text](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/screenshots/recording2.png "End_2:05-2:11")  
   
+  In the recording.wav committed at saturday 10:35pm my recording is higher than the original and not as choatic. 
+  This is the info of the commit: 
   
+  ```
+  (base) Lorenas-MacBook-Pro-816:gitshow12  
+  lorenasalome$ git commit -am "recording 02- follow original  
+  score, work on the middle and the end of file" 
+  [master d00801b] recording 02- follow original score,  
+  work on the middle and the end of file
+ 1 file changed, 0 insertions(+), 0 deletions(-)```
    
