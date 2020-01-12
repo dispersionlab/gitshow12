@@ -43,13 +43,8 @@ At 2:05, the noise and lower frequency layer stops abruptly. Random goes back to
   ![Alt Image Text](/Users/lorenasalome/Documents/DigMediaYorkU/VSL/screenshots/recording2.png "End_2:05-2:11")  
   
   In the recording.wav committed at saturday 10:35pm my recording is higher than the original and not as choatic. 
-  This is the info of the commit: 
   
-  ```
-  (base) Lorenas-MacBook-Pro-816:gitshow12  
-  lorenasalome$ git commit -am "recording 02- follow original  
-  score, work on the middle and the end of file" 
-  [master d00801b] recording 02- follow original score,  
-  work on the middle and the end of file
- 1 file changed, 0 insertions(+), 0 deletions(-)```
-   
+### Experimenting for my own score
+
+I used the other modules in the patch that weren't assgined in my score, and I tried to stick to 90 seconds. It doesn't have structure, not that it needs to have one, but I am looing for something different. this all is all over the places. 
+
