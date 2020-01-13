@@ -59,4 +59,4 @@ After experimenting with my new patch, I decided I wanted a noisy sound that wou
 >>  
 >> This is the video from the score I decided to do (it matches with the commit at 5:15 pm Sunday:
 >> 
-![test video](extensions/recording4-005.mov "test video") 
+![test video](extensions/recording4-005.m4v "test video") 
