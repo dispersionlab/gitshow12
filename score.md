@@ -57,6 +57,5 @@ I used the other modules in the patch that weren't assgined in my score, and I t
 After experimenting with my new patch, I decided I wanted a noisy sound that would start very soft and starts building up with time.  
 >> In order to make it easier to practice what I have done, I recorded the screen and sound of what I was doing.  
 >>  
->> This is the video from the score I decided to do (it matches with the commit at 5:15 pm Sunday:
->> 
-![test video](extensions/recording4-005.m4v "test video") 
+>>  Here there is a screenshot of the connections I used
+>> ![last Patch](extensions/lastPatch.png "Last Patch")
