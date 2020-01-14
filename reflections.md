@@ -60,5 +60,6 @@ After experimenting with my new patch, I decided I wanted a noisy sound that wou
 >>  Here there is a screenshot of the connections I used
 >> ![last Patch](extensions/lastPatch.png "Last Patch")
 >> 
->> gif file:
+>> gif file:  
+>> 
 >> ![last Patch](extensions/recording4-005.gif "Last Patch")
