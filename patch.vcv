@@ -10,10 +10,10 @@
       "data": {
         "audio": {
           "driver": 5,
-          "deviceName": "4c: ",
+          "deviceName": "Apple Inc.: Built-in Output",
           "offset": 0,
           "maxChannels": 8,
-          "sampleRate": 8000,
+          "sampleRate": 44100,
           "blockSize": 256
         }
       },
@@ -30,7 +30,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.56600142
+          "value": 0.858187437
         },
         {
           "id": 1,
@@ -179,7 +179,7 @@
         },
         {
           "id": 2,
-          "value": -6.08299541
+          "value": -7.00437355
         },
         {
           "id": 3,
@@ -290,7 +290,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.232499972
+          "value": 0.793406308
         },
         {
           "id": 1,
@@ -347,7 +347,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.428017229
+          "value": 0.632016897
         },
         {
           "id": 1,
@@ -359,7 +359,7 @@
         },
         {
           "id": 3,
-          "value": 0.823000431
+          "value": 0.833500564
         }
       ],
       "leftModuleId": 27,
@@ -385,7 +385,7 @@
         },
         {
           "id": 2,
-          "value": -31.1579971
+          "value": -9.40946865
         },
         {
           "id": 3,
