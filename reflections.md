@@ -3,10 +3,10 @@
 >> 
 >> 
 >> ------
-## Reflection of Last Patch_week01
-![Last Soundwork Sound Spectra] (/Users/RAC.H/Desktop/gitshow12/extensions/extensions_02.png)
+>>## Reflection of Last Patch_week01
+>>![Last Soundwork Sound Spectra] (/Users/RAC.H/Desktop/gitshow12/extensions/extensions_02.png)
 
-###Analysis of Sound Segmentation
+>>###Analysis of Sound Segmentation
 ####Sound Info
 
 * Duration: 1:19.992
