@@ -14,7 +14,7 @@
 **Analysis of Sound Segmentation**
 
 
-*Sound Info*
+***Sound Info***
 
 * Duration: 1:19.992
 * Sample Rate: 44100 Hz
@@ -22,8 +22,7 @@
 * Bit Depth: 16-bit
 * Format: Waveform Audio 16-bit Integer 
 
-
----
+ 
 
 Time  | Description  | Sound Info
 ------------- | ------------- | -------------
