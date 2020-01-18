@@ -8,11 +8,11 @@
 
 ---
 
-##Analysis of Sound Segmentation
+###Analysis of Sound Segmentation
 
 ---
 
-##Sound Info
+####Sound Info
 
 ---
 
