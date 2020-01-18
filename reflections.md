@@ -11,10 +11,10 @@
 
 ------
 
->##Analysis of Sound Segmentation
+##Analysis of Sound Segmentation
 
 
->>###Sound Info
+*Sound Info*
 
 * Duration: 1:19.992
 * Sample Rate: 44100 Hz
