@@ -4,7 +4,7 @@
 >> 
 >> ------
 ## Reflection of Last Patch_week01
-![Last Soundwork Sound Spectra] (/Users/RAC.H/Desktop/gitshow12/extensions/extensions_02)
+![Last Soundwork Sound Spectra] (/Users/RAC.H/Desktop/gitshow12/extensions/extensions_02.png)
 
 ###Analysis of Sound Segmentation
 ####Sound Info
