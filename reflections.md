@@ -37,8 +37,7 @@ Time  | Description  | Sound Info
 0:49:300 ~ 0:57.800 | tone principle 03 | low-frequency tone with schneidend sound of electronics (shorten, stable)
 0:57.800 ~ 1:00.100 | transient period | low-frequency tone
 1:00.100 ~ 1:17.150 | tone principle 04 | low-frequency tone with schneidend sound of electronics (lengthen, shattering)
-1:17.150 ~ 1:19.992 | fade out | low-frequency tone
- (lengthen)
+1:17.150 ~ 1:19.992 | fade out | low-frequency tone (lengthen)
  
  ---
  
