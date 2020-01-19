@@ -7,19 +7,21 @@
       "version": "1.1.6",
       "model": "AudioInterface",
       "params": [],
+      "leftModuleId": 2,
+      "rightModuleId": 58,
       "data": {
         "audio": {
           "driver": 5,
-          "deviceName": "4c: ",
+          "deviceName": "Apple Inc.: Built-in Output",
           "offset": 0,
           "maxChannels": 8,
-          "sampleRate": 8000,
+          "sampleRate": 44100,
           "blockSize": 256
         }
       },
       "pos": [
-        69,
-        0
+        68,
+        1
       ]
     },
     {
@@ -30,28 +32,29 @@
       "params": [
         {
           "id": 0,
-          "value": 1.56600142
+          "value": 1.85569286
         },
         {
           "id": 1,
-          "value": 0.776404083
+          "value": 0.135378793
         },
         {
           "id": 2,
-          "value": 0.704279006
+          "value": 0.855591893
         },
         {
           "id": 3,
-          "value": 0.834537208
+          "value": 1.0189054
         },
         {
           "id": 4,
-          "value": 1.0
+          "value": 0.648835659
         }
       ],
+      "rightModuleId": 1,
       "pos": [
         58,
-        0
+        1
       ]
     },
     {
@@ -62,11 +65,11 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 0.282662094
         },
         {
           "id": 1,
-          "value": 0.530001163
+          "value": 0.5
         },
         {
           "id": 2,
@@ -74,7 +77,7 @@
         },
         {
           "id": 3,
-          "value": 0.40299964
+          "value": 0.449999988
         },
         {
           "id": 4,
@@ -83,7 +86,7 @@
       ],
       "pos": [
         18,
-        1
+        2
       ]
     },
     {
@@ -92,11 +95,10 @@
       "version": "1.1.6",
       "model": "Notes",
       "params": [],
-      "leftModuleId": 29,
       "text": "patch instructions:\n\n1. Choose an audio driver and device in the AUDIO-8 module.\n\n2. Drag knobs up/down. Hold Ctrl (Cmd on Mac) while dragging to fine-tune. Right-click knobs to edit, or double-click to initialize.\n\n3. Drag ports to create and move 3ables. Stack multiple cables on outputs by holding Ctrl (Cmd on Mac) and dragging from an output.\n\n4. Right-click on an empty rack space to add new modules.",
       "pos": [
-        85,
-        0
+        104,
+        1
       ]
     },
     {
@@ -115,7 +117,7 @@
         },
         {
           "id": 2,
-          "value": 0.0
+          "value": 0.369000018
         },
         {
           "id": 3,
@@ -154,13 +156,14 @@
           "value": 0.0
         }
       ],
+      "rightModuleId": 30,
       "data": {
         "path": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow12/module.js",
         "script": "\nconfig.frameDivider = 1\n// set buffersize of module\nconfig.bufferSize = 16\n\nvar phase = 0\nvar amp = 1\nvar mix;\nvar bias_cv\n// clamp a number to within a range\nlet clampNumber = (num, a, b) => Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b));\n\n// this is where the synthesis calculation occurs\nfunction process(block) {\n    // block.knobs[0] = 0.5\n\t// Knob ranges from -5 to 5 octaves\n\t// var pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n    // pitch += block.inputs[0][0]\n    \n    // input 2 on the prototype module corresponds to the 2nd index of the block.inputs array, i.e. block.inputs[1]\n    amp = block.inputs[1][0]\n\n    // compare the amplitude of the two signal inputs\n    compare = [block.inputs[0][0], block.inputs[1][0]]\n    // get the max\n    max = Math.max(...compare)\n    // get the min\n    min = Math.min(...compare)\n\n    // the 1st knob on the prototype module will affect the biasing between input 1 or 2    \n    var bias = block.knobs[0] * 2 - 1\n    \n    // bias_cv += bias * Math.pow(2, block.inputs[2][0]);\n    if(bias < 0.){\n        mix = clampNumber( ((Math.abs(bias) * min) + (bias * max) * max * block.inputs[2][0]), -10., 10.)\n    } else if (bias > 0.){\n        mix = clampNumber( ((bias * max) + ((bias * -1) * min) * min * block.inputs[2][0]), -10., 10.)\n    }\n\n    var freq = 1\n\t//display(\"Freq: \" + freq.toFixed(3) + \" Hz\")\n\n\t// Set all samples in output buffer: this is where each sample is calculated, hence the for...loop. \n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n        phase %= 1\n        // this is like the console.log output of the prototype module. unfortunately it only displays a single concatenated string. \n        display(\"Logic Module: max, min, mix\" + mix)\n        \n\t\t// Convert phase to sine output\n        //block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5 * amp\n        block.outputs[0][i] = max\n        block.outputs[1][i] = min\n        block.outputs[2][i] = mix\n\t}\n}\n"
       },
       "pos": [
-        45,
-        1
+        53,
+        2
       ]
     },
     {
@@ -202,7 +205,7 @@
       "rightModuleId": 44,
       "pos": [
         13,
-        0
+        1
       ]
     },
     {
@@ -213,25 +216,24 @@
       "params": [
         {
           "id": 0,
-          "value": 1.02999973
+          "value": 1.0
         },
         {
           "id": 1,
           "value": 0.0
         }
       ],
-      "rightModuleId": 8,
       "data": {
         "format": "wav",
         "path": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow12/recording.wav",
         "incrementPath": true,
-        "sampleRate": 44100,
+        "sampleRate": 48000,
         "depth": 16,
         "bitRate": 320000
       },
       "pos": [
-        80,
-        0
+        97,
+        1
       ]
     },
     {
@@ -246,19 +248,19 @@
         },
         {
           "id": 1,
-          "value": 0.0
+          "value": 3.48219299
         },
         {
           "id": 2,
-          "value": 0.0
+          "value": 2.0
         },
         {
           "id": 3,
-          "value": 0.0
+          "value": -0.473535538
         },
         {
           "id": 4,
-          "value": 14.0
+          "value": 13.1629677
         },
         {
           "id": 5,
@@ -266,20 +268,21 @@
         },
         {
           "id": 6,
-          "value": 0.0
+          "value": -9.85886574
         },
         {
           "id": 7,
           "value": 0.0
         }
       ],
+      "leftModuleId": 17,
       "data": {
         "lissajous": 0,
         "external": 0
       },
       "pos": [
-        65,
-        1
+        68,
+        2
       ]
     },
     {
@@ -307,7 +310,7 @@
       ],
       "pos": [
         43,
-        0
+        1
       ]
     },
     {
@@ -318,25 +321,25 @@
       "params": [
         {
           "id": 0,
-          "value": 0.604000688
+          "value": 0.59948498
         },
         {
           "id": 1,
-          "value": 0.726999938
+          "value": 0.754999995
         },
         {
           "id": 2,
-          "value": 0.701000392
+          "value": 0.5
         },
         {
           "id": 3,
-          "value": 0.950499833
+          "value": 0.0
         }
       ],
       "leftModuleId": 44,
       "pos": [
         31,
-        0
+        1
       ]
     },
     {
@@ -359,14 +362,14 @@
         },
         {
           "id": 3,
-          "value": 0.823000431
+          "value": 0.689500332
         }
       ],
       "leftModuleId": 27,
       "rightModuleId": 43,
       "pos": [
         23,
-        0
+        1
       ]
     },
     {
@@ -385,7 +388,7 @@
         },
         {
           "id": 2,
-          "value": -31.1579971
+          "value": -42.1739922
         },
         {
           "id": 3,
@@ -408,7 +411,7 @@
       "rightModuleId": 27,
       "pos": [
         3,
-        0
+        1
       ]
     },
     {
@@ -420,6 +423,697 @@
       "rightModuleId": 46,
       "pos": [
         0,
+        1
+      ]
+    },
+    {
+      "id": 49,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank20HP",
+      "params": [],
+      "leftModuleId": 60,
+      "style": 0.0,
+      "pos": [
+        82,
+        0
+      ]
+    },
+    {
+      "id": 50,
+      "plugin": "ImpromptuModular",
+      "version": "1.1.3",
+      "model": "Clocked",
+      "params": [
+        {
+          "id": 0,
+          "value": 60.0
+        },
+        {
+          "id": 1,
+          "value": -13.0
+        },
+        {
+          "id": 2,
+          "value": 0.0
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "value": 0.201000035
+        },
+        {
+          "id": 5,
+          "value": 0.0
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        },
+        {
+          "id": 7,
+          "value": 0.0
+        },
+        {
+          "id": 8,
+          "value": 0.625999868
+        },
+        {
+          "id": 9,
+          "value": 0.5
+        },
+        {
+          "id": 10,
+          "value": 0.5
+        },
+        {
+          "id": 11,
+          "value": 0.5
+        },
+        {
+          "id": 12,
+          "value": 0.0
+        },
+        {
+          "id": 13,
+          "value": 0.0
+        },
+        {
+          "id": 14,
+          "value": 0.0
+        },
+        {
+          "id": 15,
+          "value": 1.0
+        },
+        {
+          "id": 16,
+          "value": 0.0
+        },
+        {
+          "id": 17,
+          "value": 0.0
+        },
+        {
+          "id": 18,
+          "value": 0.0
+        },
+        {
+          "id": 19,
+          "value": 0.0
+        }
+      ],
+      "rightModuleId": 53,
+      "data": {
+        "panelTheme": 0,
+        "running": true,
+        "displayDelayNoteMode": true,
+        "bpmDetectionMode": false,
+        "restartOnStopStartRun": 0,
+        "sendResetOnRestart": false,
+        "ppqn": 4,
+        "resetClockOutputsHigh": true,
+        "momentaryRunInput": true
+      },
+      "pos": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": 51,
+      "plugin": "Valley",
+      "version": "1.0.1",
+      "model": "Plateau",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.194396436
+        },
+        {
+          "id": 1,
+          "value": 0.577682853
+        },
+        {
+          "id": 2,
+          "value": 0.382306486
+        },
+        {
+          "id": 3,
+          "value": 3.71221733
+        },
+        {
+          "id": 4,
+          "value": 6.70806503
+        },
+        {
+          "id": 5,
+          "value": 0.376414657
+        },
+        {
+          "id": 6,
+          "value": 6.28222227
+        },
+        {
+          "id": 7,
+          "value": 0.610460341
+        },
+        {
+          "id": 8,
+          "value": 6.93878412
+        },
+        {
+          "id": 9,
+          "value": 3.62417412
+        },
+        {
+          "id": 10,
+          "value": 0.679618418
+        },
+        {
+          "id": 11,
+          "value": 0.396310449
+        },
+        {
+          "id": 12,
+          "value": 13.4709587
+        },
+        {
+          "id": 13,
+          "value": 0.0
+        },
+        {
+          "id": 14,
+          "value": 0.0
+        },
+        {
+          "id": 15,
+          "value": 0.0
+        },
+        {
+          "id": 16,
+          "value": 0.0
+        },
+        {
+          "id": 17,
+          "value": 0.390856147
+        },
+        {
+          "id": 18,
+          "value": -0.507436037
+        },
+        {
+          "id": 19,
+          "value": 0.252986073
+        },
+        {
+          "id": 20,
+          "value": 0.698591471
+        },
+        {
+          "id": 21,
+          "value": -0.579584837
+        },
+        {
+          "id": 22,
+          "value": 0.281714797
+        },
+        {
+          "id": 23,
+          "value": 0.30032599
+        },
+        {
+          "id": 24,
+          "value": -0.537279606
+        },
+        {
+          "id": 25,
+          "value": 0.546518683
+        },
+        {
+          "id": 26,
+          "value": -0.626014113
+        },
+        {
+          "id": 27,
+          "value": 0.197528124
+        },
+        {
+          "id": 28,
+          "value": -0.767380714
+        },
+        {
+          "id": 29,
+          "value": 0.0
+        },
+        {
+          "id": 30,
+          "value": 1.0
+        }
+      ],
+      "leftModuleId": 54,
+      "rightModuleId": 60,
+      "data": {
+        "frozen": false,
+        "freezeToggle": false,
+        "panelStyle": 0,
+        "tuned": 0,
+        "diffuseInput": 1,
+        "preDelayCVSens": 1,
+        "inputSensitivity": 0,
+        "outputSaturation": 1
+      },
+      "pos": [
+        58,
+        0
+      ]
+    },
+    {
+      "id": 53,
+      "plugin": "cf",
+      "version": "1.1.1",
+      "model": "PLAYER",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        },
+        {
+          "id": 2,
+          "value": 0.0
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "value": 0.0
+        },
+        {
+          "id": 5,
+          "value": 0.0
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 50,
+      "rightModuleId": 57,
+      "data": {
+        "lastPath": "/Users/RAC.H/Desktop/Cinematic Female Vocal 32.wav",
+        "oscstate": 1
+      },
+      "pos": [
+        20,
+        0
+      ]
+    },
+    {
+      "id": 54,
+      "plugin": "VultModulesFree",
+      "version": "1.6.0",
+      "model": "Trummor2",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.0391032472
+        },
+        {
+          "id": 1,
+          "value": 0.790589094
+        },
+        {
+          "id": 2,
+          "value": 0.56399405
+        },
+        {
+          "id": 3,
+          "value": 0.812944293
+        },
+        {
+          "id": 4,
+          "value": 0.493759334
+        },
+        {
+          "id": 5,
+          "value": 0.579155445
+        },
+        {
+          "id": 6,
+          "value": 0.664595783
+        },
+        {
+          "id": 7,
+          "value": 0.205793276
+        },
+        {
+          "id": 8,
+          "value": 0.680802584
+        },
+        {
+          "id": 9,
+          "value": 2.0
+        },
+        {
+          "id": 10,
+          "value": 0.647926629
+        },
+        {
+          "id": 11,
+          "value": 0.796192765
+        },
+        {
+          "id": 12,
+          "value": 0.753893495
+        },
+        {
+          "id": 13,
+          "value": -0.093396306
+        },
+        {
+          "id": 14,
+          "value": 0.996985793
+        },
+        {
+          "id": 15,
+          "value": 0.342518628
+        },
+        {
+          "id": 16,
+          "value": 0.202082932
+        },
+        {
+          "id": 17,
+          "value": 1.0
+        },
+        {
+          "id": 18,
+          "value": 0.20512557
+        },
+        {
+          "id": 19,
+          "value": 0.792971432
+        },
+        {
+          "id": 20,
+          "value": 0.038880229
+        },
+        {
+          "id": 21,
+          "value": 2.0
+        },
+        {
+          "id": 22,
+          "value": 0.104240954
+        },
+        {
+          "id": 23,
+          "value": 0.779783607
+        },
+        {
+          "id": 24,
+          "value": 0.0
+        },
+        {
+          "id": 25,
+          "value": -0.549489975
+        },
+        {
+          "id": 26,
+          "value": 0.274136901
+        },
+        {
+          "id": 27,
+          "value": -0.525232911
+        },
+        {
+          "id": 28,
+          "value": -0.568650723
+        },
+        {
+          "id": 29,
+          "value": 0.0
+        },
+        {
+          "id": 30,
+          "value": 0.0
+        },
+        {
+          "id": 31,
+          "value": 0.0
+        },
+        {
+          "id": 32,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 57,
+      "rightModuleId": 51,
+      "data": {
+        "mod_a": 8,
+        "mod_b": 20,
+        "mod_c": 16,
+        "mod_d": 2,
+        "mk2": true
+      },
+      "pos": [
+        38,
+        0
+      ]
+    },
+    {
+      "id": 57,
+      "plugin": "cf",
+      "version": "1.1.1",
+      "model": "PLAYER",
+      "params": [
+        {
+          "id": 0,
+          "value": 2.00041723
+        },
+        {
+          "id": 1,
+          "value": 4.12333012
+        },
+        {
+          "id": 2,
+          "value": 0.730409265
+        },
+        {
+          "id": 3,
+          "value": 0.725274563
+        },
+        {
+          "id": 4,
+          "value": 0.0
+        },
+        {
+          "id": 5,
+          "value": 0.0
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 53,
+      "rightModuleId": 54,
+      "data": {
+        "lastPath": "/Users/RAC.H/Desktop/Musical composition filtered beeps bells_BLASTWAVEFX_00851.wav",
+        "oscstate": 1
+      },
+      "pos": [
+        29,
+        0
+      ]
+    },
+    {
+      "id": 58,
+      "plugin": "Fundamental",
+      "version": "1.4.0",
+      "model": "VCMixer",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 0.530330837
+        },
+        {
+          "id": 2,
+          "value": 0.564271986
+        },
+        {
+          "id": 3,
+          "value": 1.41421354
+        },
+        {
+          "id": 4,
+          "value": 1.41421354
+        }
+      ],
+      "leftModuleId": 1,
+      "pos": [
+        78,
+        1
+      ]
+    },
+    {
+      "id": 60,
+      "plugin": "Valley",
+      "version": "1.0.1",
+      "model": "Plateau",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.725248933
+        },
+        {
+          "id": 1,
+          "value": 0.754923165
+        },
+        {
+          "id": 2,
+          "value": 0.0146603882
+        },
+        {
+          "id": 3,
+          "value": 9.14311123
+        },
+        {
+          "id": 4,
+          "value": 6.74471092
+        },
+        {
+          "id": 5,
+          "value": 0.0766764879
+        },
+        {
+          "id": 6,
+          "value": 2.01536298
+        },
+        {
+          "id": 7,
+          "value": 0.129203752
+        },
+        {
+          "id": 8,
+          "value": 0.980122685
+        },
+        {
+          "id": 9,
+          "value": 5.05348158
+        },
+        {
+          "id": 10,
+          "value": 0.463370144
+        },
+        {
+          "id": 11,
+          "value": 0.507745683
+        },
+        {
+          "id": 12,
+          "value": 2.73248768
+        },
+        {
+          "id": 13,
+          "value": 0.0
+        },
+        {
+          "id": 14,
+          "value": 0.0
+        },
+        {
+          "id": 15,
+          "value": 0.0
+        },
+        {
+          "id": 16,
+          "value": 0.0
+        },
+        {
+          "id": 17,
+          "value": -0.730292559
+        },
+        {
+          "id": 18,
+          "value": -0.464478254
+        },
+        {
+          "id": 19,
+          "value": -0.705768466
+        },
+        {
+          "id": 20,
+          "value": -0.622404695
+        },
+        {
+          "id": 21,
+          "value": 0.286712646
+        },
+        {
+          "id": 22,
+          "value": 0.372678399
+        },
+        {
+          "id": 23,
+          "value": -0.679646969
+        },
+        {
+          "id": 24,
+          "value": -0.988264203
+        },
+        {
+          "id": 25,
+          "value": -0.895100117
+        },
+        {
+          "id": 26,
+          "value": -0.775951147
+        },
+        {
+          "id": 27,
+          "value": 0.19088912
+        },
+        {
+          "id": 28,
+          "value": -0.816453576
+        },
+        {
+          "id": 29,
+          "value": 0.0
+        },
+        {
+          "id": 30,
+          "value": 1.0
+        }
+      ],
+      "leftModuleId": 51,
+      "rightModuleId": 49,
+      "data": {
+        "frozen": false,
+        "freezeToggle": false,
+        "panelStyle": 0,
+        "tuned": 0,
+        "diffuseInput": 1,
+        "preDelayCVSens": 1,
+        "inputSensitivity": 1,
+        "outputSaturation": 1
+      },
+      "pos": [
+        70,
         0
       ]
     }
@@ -530,52 +1224,12 @@
       "color": "#0986ad"
     },
     {
-      "id": 342,
-      "outputModuleId": 2,
-      "outputId": 2,
-      "inputModuleId": 29,
-      "inputId": 3,
-      "color": "#c9b70e"
-    },
-    {
-      "id": 341,
-      "outputModuleId": 2,
-      "outputId": 1,
-      "inputModuleId": 29,
-      "inputId": 2,
-      "color": "#0986ad"
-    },
-    {
-      "id": 281,
-      "outputModuleId": 2,
-      "outputId": 0,
-      "inputModuleId": 1,
-      "inputId": 0,
-      "color": "#0986ad"
-    },
-    {
-      "id": 282,
-      "outputModuleId": 2,
-      "outputId": 0,
-      "inputModuleId": 1,
-      "inputId": 1,
-      "color": "#c9b70e"
-    },
-    {
       "id": 433,
       "outputModuleId": 17,
       "outputId": 0,
       "inputModuleId": 2,
       "inputId": 2,
       "color": "#0c8e15"
-    },
-    {
-      "id": 410,
-      "outputModuleId": 43,
-      "outputId": 0,
-      "inputModuleId": 32,
-      "inputId": 2,
-      "color": "#0986ad"
     },
     {
       "id": 437,
@@ -618,19 +1272,179 @@
       "color": "#0986ad"
     },
     {
-      "id": 441,
-      "outputModuleId": 44,
-      "outputId": 0,
-      "inputModuleId": 32,
-      "inputId": 3,
-      "color": "#c9b70e"
-    },
-    {
       "id": 442,
       "outputModuleId": 48,
       "outputId": 1,
       "inputModuleId": 27,
       "inputId": 0,
+      "color": "#c91847"
+    },
+    {
+      "id": 410,
+      "outputModuleId": 43,
+      "outputId": 0,
+      "inputModuleId": 51,
+      "inputId": 0,
+      "color": "#0986ad"
+    },
+    {
+      "id": 441,
+      "outputModuleId": 44,
+      "outputId": 0,
+      "inputModuleId": 51,
+      "inputId": 1,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 443,
+      "outputModuleId": 51,
+      "outputId": 0,
+      "inputModuleId": 32,
+      "inputId": 2,
+      "color": "#0986ad"
+    },
+    {
+      "id": 444,
+      "outputModuleId": 51,
+      "outputId": 1,
+      "inputModuleId": 32,
+      "inputId": 3,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 445,
+      "outputModuleId": 50,
+      "outputId": 1,
+      "inputModuleId": 44,
+      "inputId": 5,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 460,
+      "outputModuleId": 53,
+      "outputId": 1,
+      "inputModuleId": 54,
+      "inputId": 8,
+      "color": "#c91847"
+    },
+    {
+      "id": 482,
+      "outputModuleId": 58,
+      "outputId": 0,
+      "inputModuleId": 29,
+      "inputId": 2,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 483,
+      "outputModuleId": 58,
+      "outputId": 0,
+      "inputModuleId": 29,
+      "inputId": 3,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 461,
+      "outputModuleId": 53,
+      "outputId": 0,
+      "inputModuleId": 54,
+      "inputId": 7,
+      "color": "#0986ad"
+    },
+    {
+      "id": 486,
+      "outputModuleId": 54,
+      "outputId": 2,
+      "inputModuleId": 2,
+      "inputId": 3,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 471,
+      "outputModuleId": 54,
+      "outputId": 3,
+      "inputModuleId": 2,
+      "inputId": 4,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 475,
+      "outputModuleId": 57,
+      "outputId": 1,
+      "inputModuleId": 60,
+      "inputId": 0,
+      "color": "#0986ad"
+    },
+    {
+      "id": 485,
+      "outputModuleId": 57,
+      "outputId": 0,
+      "inputModuleId": 60,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
+      "id": 487,
+      "outputModuleId": 60,
+      "outputId": 0,
+      "inputModuleId": 58,
+      "inputId": 3,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 488,
+      "outputModuleId": 60,
+      "outputId": 1,
+      "inputModuleId": 58,
+      "inputId": 4,
+      "color": "#c91847"
+    },
+    {
+      "id": 477,
+      "outputModuleId": 58,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 478,
+      "outputModuleId": 58,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 1,
+      "color": "#c91847"
+    },
+    {
+      "id": 489,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 58,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
+      "id": 490,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 58,
+      "inputId": 2,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 491,
+      "outputModuleId": 50,
+      "outputId": 2,
+      "inputModuleId": 53,
+      "inputId": 5,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 492,
+      "outputModuleId": 50,
+      "outputId": 5,
+      "inputModuleId": 57,
+      "inputId": 4,
       "color": "#c91847"
     }
   ]
