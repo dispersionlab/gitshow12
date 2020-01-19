@@ -14,16 +14,32 @@
 **Analysis of Sound Segmentation**
 
 
-***Sound Info***
+>***Sound Info***
 
-* Duration: 1:19.992
-* Sample Rate: 44100 Hz
-* Channels: Stereo
-* Bit Depth: 16-bit
-* Format: Waveform Audio 16-bit Integer 
+>>* Duration: 1:19.992
+>>* Sample Rate: 44100 Hz
+>>* Channels: Stereo
+>>* Bit Depth: 16-bit
+>>* Format: Waveform Audio 16-bit Integer 
+>>
+>>This patch consists of one tone principle which has low-frequency tones with scratchy sound of electronics. It consists of four parts with two sets of contrasted representation: Lengthen vs Shorten, Shattered vs Proceed. 
 
-This patch consists of one tone principle which has low-frequency tones with scratchy sound of electronics. It consists of four parts with two sets of contrasted representation: Lengthen vs Shorten, Shattered vs Proceed. 
+---
+
+>***Comment_RacelarHo***
+
+>>* The homophony here consists of the dialling-signal-like sounds, and it reminds me of the Electronic Music of the 1960s, especially the concept of Cybernetics.
+>>* Compared with the general Experimental Music, this work avoids the regular forms, such as forma sonata, variation form and rondo form, but employs ritornello form with more stretchable amplitudes and intensities. Reference: the 59 - 69 syllable (the epilogue of Episode 6) of Bach's Violin Concerto in E Major. 
+
+---
+>***Inspiration_week02_RacelarHo***
+
+>>* I'm going to inherit the tone principle here as the Music Bed of the new sound and continue the ritornello form, especially Bach's work I mentioned upon.
+>>* In the next version, I will supply additional tones, such as female voice, to abundant in the musical texture, and also reduce the volumes of the overfrequency pitches.   
  
+---
+
+**Initial Sound Segmentations_Week01**
 
 Time  | Description  | Sound Info
 ------------- | ------------- | -------------

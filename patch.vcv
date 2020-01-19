@@ -20,8 +20,8 @@
         }
       },
       "pos": [
-        68,
-        2
+        92,
+        1
       ]
     },
     {
@@ -51,10 +51,11 @@
           "value": 0.113854736
         }
       ],
+      "leftModuleId": 72,
       "rightModuleId": 1,
       "pos": [
-        58,
-        2
+        82,
+        1
       ]
     },
     {
@@ -84,9 +85,11 @@
           "value": 0.571000099
         }
       ],
+      "leftModuleId": 70,
+      "rightModuleId": 73,
       "pos": [
-        18,
-        3
+        56,
+        2
       ]
     },
     {
@@ -95,10 +98,12 @@
       "version": "1.1.6",
       "model": "Notes",
       "params": [],
+      "leftModuleId": 76,
+      "rightModuleId": 77,
       "text": "patch instructions:\n\n1. Choose an audio driver and device in the AUDIO-8 module.\n\n2. Drag knobs up/down. Hold Ctrl (Cmd on Mac) while dragging to fine-tune. Right-click knobs to edit, or double-click to initialize.\n\n3. Drag ports to create and move 3ables. Stack multiple cables on outputs by holding Ctrl (Cmd on Mac) and dragging from an output.\n\n4. Right-click on an empty rack space to add new modules.",
       "pos": [
-        104,
-        2
+        123,
+        1
       ]
     },
     {
@@ -156,13 +161,14 @@
           "value": 0.0
         }
       ],
+      "rightModuleId": 74,
       "data": {
         "path": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow12/module.js",
         "script": "\nconfig.frameDivider = 1\n// set buffersize of module\nconfig.bufferSize = 16\n\nvar phase = 0\nvar amp = 1\nvar mix;\nvar bias_cv\n// clamp a number to within a range\nlet clampNumber = (num, a, b) => Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b));\n\n// this is where the synthesis calculation occurs\nfunction process(block) {\n    // block.knobs[0] = 0.5\n\t// Knob ranges from -5 to 5 octaves\n\t// var pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n    // pitch += block.inputs[0][0]\n    \n    // input 2 on the prototype module corresponds to the 2nd index of the block.inputs array, i.e. block.inputs[1]\n    amp = block.inputs[1][0]\n\n    // compare the amplitude of the two signal inputs\n    compare = [block.inputs[0][0], block.inputs[1][0]]\n    // get the max\n    max = Math.max(...compare)\n    // get the min\n    min = Math.min(...compare)\n\n    // the 1st knob on the prototype module will affect the biasing between input 1 or 2    \n    var bias = block.knobs[0] * 2 - 1\n    \n    // bias_cv += bias * Math.pow(2, block.inputs[2][0]);\n    if(bias < 0.){\n        mix = clampNumber( ((Math.abs(bias) * min) + (bias * max) * max * block.inputs[2][0]), -10., 10.)\n    } else if (bias > 0.){\n        mix = clampNumber( ((bias * max) + ((bias * -1) * min) * min * block.inputs[2][0]), -10., 10.)\n    }\n\n    var freq = 1\n\t//display(\"Freq: \" + freq.toFixed(3) + \" Hz\")\n\n\t// Set all samples in output buffer: this is where each sample is calculated, hence the for...loop. \n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n        phase %= 1\n        // this is like the console.log output of the prototype module. unfortunately it only displays a single concatenated string. \n        display(\"Logic Module: max, min, mix\" + mix)\n        \n\t\t// Convert phase to sine output\n        //block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5 * amp\n        block.outputs[0][i] = max\n        block.outputs[1][i] = min\n        block.outputs[2][i] = mix\n\t}\n}\n"
       },
       "pos": [
-        53,
-        3
+        85,
+        2
       ]
     },
     {
@@ -203,36 +209,8 @@
       "leftModuleId": 46,
       "rightModuleId": 44,
       "pos": [
-        13,
-        2
-      ]
-    },
-    {
-      "id": 29,
-      "plugin": "VCV-Recorder",
-      "version": "1.0.1",
-      "model": "Recorder",
-      "params": [
-        {
-          "id": 0,
-          "value": 1.0
-        },
-        {
-          "id": 1,
-          "value": 0.0
-        }
-      ],
-      "data": {
-        "format": "wav",
-        "path": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow12/recording.wav",
-        "incrementPath": true,
-        "sampleRate": 48000,
-        "depth": 16,
-        "bitRate": 320000
-      },
-      "pos": [
-        96,
-        2
+        40,
+        1
       ]
     },
     {
@@ -274,14 +252,15 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 74,
       "rightModuleId": 64,
       "data": {
         "lissajous": 0,
         "external": 0
       },
       "pos": [
-        78,
-        3
+        103,
+        2
       ]
     },
     {
@@ -307,9 +286,11 @@
           "value": 0.736088991
         }
       ],
+      "leftModuleId": 71,
+      "rightModuleId": 72,
       "pos": [
-        43,
-        2
+        70,
+        1
       ]
     },
     {
@@ -336,9 +317,10 @@
         }
       ],
       "leftModuleId": 44,
+      "rightModuleId": 71,
       "pos": [
-        31,
-        2
+        58,
+        1
       ]
     },
     {
@@ -367,8 +349,8 @@
       "leftModuleId": 27,
       "rightModuleId": 43,
       "pos": [
-        23,
-        2
+        50,
+        1
       ]
     },
     {
@@ -409,8 +391,8 @@
       "leftModuleId": 48,
       "rightModuleId": 27,
       "pos": [
-        3,
-        2
+        30,
+        1
       ]
     },
     {
@@ -419,10 +401,11 @@
       "version": "1.4.0",
       "model": "Noise",
       "params": [],
+      "leftModuleId": 69,
       "rightModuleId": 46,
       "pos": [
-        0,
-        2
+        27,
+        1
       ]
     },
     {
@@ -432,10 +415,11 @@
       "model": "Blank20HP",
       "params": [],
       "leftModuleId": 60,
+      "rightModuleId": 81,
       "style": 0.0,
       "pos": [
-        82,
-        1
+        109,
+        0
       ]
     },
     {
@@ -525,6 +509,7 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 61,
       "rightModuleId": 53,
       "data": {
         "panelTheme": 0,
@@ -538,8 +523,8 @@
         "momentaryRunInput": true
       },
       "pos": [
-        0,
-        1
+        27,
+        0
       ]
     },
     {
@@ -686,8 +671,8 @@
         "outputSaturation": 1
       },
       "pos": [
-        58,
-        1
+        85,
+        0
       ]
     },
     {
@@ -732,8 +717,8 @@
         "oscstate": 1
       },
       "pos": [
-        20,
-        1
+        47,
+        0
       ]
     },
     {
@@ -885,8 +870,8 @@
         "mk2": true
       },
       "pos": [
-        38,
-        1
+        65,
+        0
       ]
     },
     {
@@ -931,8 +916,8 @@
         "oscstate": 1
       },
       "pos": [
-        29,
-        1
+        56,
+        0
       ]
     },
     {
@@ -963,10 +948,10 @@
         }
       ],
       "leftModuleId": 1,
-      "rightModuleId": 62,
+      "rightModuleId": 75,
       "pos": [
-        78,
-        2
+        102,
+        1
       ]
     },
     {
@@ -1113,8 +1098,8 @@
         "outputSaturation": 1
       },
       "pos": [
-        70,
-        1
+        97,
+        0
       ]
     },
     {
@@ -1204,6 +1189,8 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 68,
+      "rightModuleId": 50,
       "data": {
         "panelTheme": 0,
         "running": true,
@@ -1216,7 +1203,7 @@
         "momentaryRunInput": true
       },
       "pos": [
-        29,
+        7,
         0
       ]
     },
@@ -1239,15 +1226,16 @@
           "value": 1.0
         }
       ],
-      "leftModuleId": 58,
+      "leftModuleId": 75,
+      "rightModuleId": 76,
       "data": {
         "nysthi_id": "MR_n8sdHak1",
         "wavebits": 9,
         "m_attenuation": 1.0
       },
       "pos": [
-        88,
-        2
+        115,
+        1
       ]
     },
     {
@@ -1286,14 +1274,14 @@
         }
       ],
       "leftModuleId": 64,
-      "rightModuleId": 65,
+      "rightModuleId": 79,
       "data": {
         "lastPath": "/Users/RAC.H/Desktop/RAD_TEXTURE_EDT_01.wav",
         "oscstate": 1
       },
       "pos": [
-        101,
-        3
+        126,
+        2
       ]
     },
     {
@@ -1326,8 +1314,8 @@
       "leftModuleId": 30,
       "rightModuleId": 63,
       "pos": [
-        91,
-        3
+        116,
+        2
       ]
     },
     {
@@ -1461,7 +1449,8 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 63,
+      "leftModuleId": 79,
+      "rightModuleId": 80,
       "data": {
         "frozen": false,
         "freezeToggle": true,
@@ -1473,8 +1462,239 @@
         "outputSaturation": 1
       },
       "pos": [
-        110,
-        3
+        138,
+        2
+      ]
+    },
+    {
+      "id": 68,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank4HP",
+      "params": [],
+      "leftModuleId": 83,
+      "rightModuleId": 61,
+      "style": 0.0,
+      "pos": [
+        3,
+        0
+      ]
+    },
+    {
+      "id": 69,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank3HP",
+      "params": [],
+      "rightModuleId": 48,
+      "style": 0.0,
+      "pos": [
+        24,
+        1
+      ]
+    },
+    {
+      "id": 70,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank3HP",
+      "params": [],
+      "leftModuleId": 78,
+      "rightModuleId": 4,
+      "style": 0.0,
+      "pos": [
+        53,
+        2
+      ]
+    },
+    {
+      "id": 71,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank4HP",
+      "params": [],
+      "leftModuleId": 43,
+      "rightModuleId": 32,
+      "style": 0.0,
+      "pos": [
+        66,
+        1
+      ]
+    },
+    {
+      "id": 72,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank4HP",
+      "params": [],
+      "leftModuleId": 32,
+      "rightModuleId": 2,
+      "style": 0.0,
+      "pos": [
+        78,
+        1
+      ]
+    },
+    {
+      "id": 73,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank20HP",
+      "params": [],
+      "leftModuleId": 4,
+      "style": 0.0,
+      "pos": [
+        64,
+        2
+      ]
+    },
+    {
+      "id": 74,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank3HP",
+      "params": [],
+      "leftModuleId": 17,
+      "rightModuleId": 30,
+      "style": 0.0,
+      "pos": [
+        100,
+        2
+      ]
+    },
+    {
+      "id": 75,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank3HP",
+      "params": [],
+      "leftModuleId": 58,
+      "rightModuleId": 62,
+      "style": 0.0,
+      "pos": [
+        112,
+        1
+      ]
+    },
+    {
+      "id": 76,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank3HP",
+      "params": [],
+      "leftModuleId": 62,
+      "rightModuleId": 8,
+      "style": 0.0,
+      "pos": [
+        120,
+        1
+      ]
+    },
+    {
+      "id": 77,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank3HP",
+      "params": [],
+      "leftModuleId": 8,
+      "style": 0.0,
+      "pos": [
+        139,
+        1
+      ]
+    },
+    {
+      "id": 78,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank4HP",
+      "params": [],
+      "rightModuleId": 70,
+      "style": 0.0,
+      "pos": [
+        49,
+        2
+      ]
+    },
+    {
+      "id": 79,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank3HP",
+      "params": [],
+      "leftModuleId": 63,
+      "rightModuleId": 65,
+      "style": 0.0,
+      "pos": [
+        135,
+        2
+      ]
+    },
+    {
+      "id": 80,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank3HP",
+      "params": [],
+      "leftModuleId": 65,
+      "rightModuleId": 82,
+      "style": 0.0,
+      "pos": [
+        150,
+        2
+      ]
+    },
+    {
+      "id": 81,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank4HP",
+      "params": [],
+      "leftModuleId": 49,
+      "rightModuleId": 84,
+      "style": 0.0,
+      "pos": [
+        129,
+        0
+      ]
+    },
+    {
+      "id": 82,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank4HP",
+      "params": [],
+      "leftModuleId": 80,
+      "style": 0.0,
+      "pos": [
+        153,
+        2
+      ]
+    },
+    {
+      "id": 83,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank3HP",
+      "params": [],
+      "rightModuleId": 68,
+      "style": 0.0,
+      "pos": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": 84,
+      "plugin": "ModularFungi",
+      "version": "1.0.0",
+      "model": "Blank3HP",
+      "params": [],
+      "leftModuleId": 81,
+      "style": 0.0,
+      "pos": [
+        133,
+        0
       ]
     }
   ],
