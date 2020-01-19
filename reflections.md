@@ -93,10 +93,7 @@ LFO-1      |  /  |  /  |  LFO-1 can produce four wave types: Sine, Triangle, Saw
       /    | CV, Sustain <-> *SIN*,**VCO-1** | 60.45 | Sustain is the difference in volume from the beginning of sound to the minimum level of sound while still pressing a key down. It is useful to consider Sustain and Decay at the same time as they are closely connected. 
       /    | CV, Release <-> *SIN*,**LFO-1** | 1958.9 | Release is the amount of time it takes for the sound to go to silence after a note has been released. The image here has a very long slow Release.
       /    | Gate <-> *TRI*,**LFO-1** | / | GATE output generates 10V
-     /     | RETRIG <-> / | / | Socket " is the ADSR’s retrigger input, which can be
-connected, for instance, to the output from an LFO.
-That means that while the gate is open, the envelope
-re-triggers every time it senses a pulse from the LFO
+     /     | RETRIG <-> / | / | Socket " is the ADSR’s retrigger input, which can be connected, for instance, to the output from an LFO. That means that while the gate is open, the envelope re-triggers every time it senses a pulse from the LFO.
      /     | OUT <-> *IN*,**DELAY**; + *IN2*,**SPRING REVERB** | / | /
    DELAY  |        /      |  / | Delay or 'echo' is a workhorse in any studio. Delay allows us to take a sound and repeat it. We have control over the speed of the repeat as well as the number of times it repeats. Delay can be used to add very nice textures and effects to any performance.
      /     | CV, Time <-> *SQR*,**VCO-1** | 0.26062 | Time allows us to adjust the time between repeated sounds. Further to the left can take the sounds down to the milliseconds and to the right provides a delay seconds in duration. Rotating the control to the right can create such fast repeated sounds that it can result in some fascinating textures.
