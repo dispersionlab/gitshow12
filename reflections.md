@@ -102,4 +102,49 @@ DELAY | / | / | Delay or 'echo' is a workhorse in any studio. Delay allows us to
 / | CV, Feedback <-> *SAW*,**VCO-1** | 72.7 | If Time controls the lenght of time between repeated sounds Feedback controls the time it takes for the repeated sounds to fade away to silence. Turning the control all the way to the left will have the sound fade away instantly and all the way to the right will have the sound repeating on and on with now decrease in volume level
 / | CV, Colour <-> / | 70.1 | Colours of noise, each with a different characteristic and frequency response.
 / | CV, Mix <-> / | 90.05 | /
+SPRING REVERB | A spring reverb is a technology which allowed sound engineers to emulate the ambient sound of a room by using a spring connected to a sound generator. A sound could be played into the spring via the sound generator then a mic would pick up the resulting reverb sound. The 'Reverb Tanks' could be quite small and durable making them excellent for amplifiers and such. Befaco's Spring Reverb uses software to emulate the sound of the tank.
+/ | DRY/WET knob | 23.25 | A 'dry' signal refers to an original signal which has not had any alterations. A 'wet' signal is the full altered signal. 
+/ | CV IN 1 <-> / | 60 | There are two sliders on Spring Reverb. Each are for one of the two inputs. These sliders govern the amount of signal coming in from the input and being sent to the reverb tank. If you have a CV device connected to these sliders then they act as an attenuator for the signal on that input.
+/ | CV IN 2 <-> / | 70 | There are two sliders on Spring Reverb. Each are for one of the two inputs. These sliders govern the amount of signal coming in from the input and being sent to the reverb tank. If you have a CV device connected to these sliders then they act as an attenuator for the signal on that input.
+/ | High Pass Filter | 0.7335 | A high pass filter reduces the amount of low frequencies which are allowed to pass through a device. This is very important in a Spring Reverb as these sorts of reverbs can become overloaded if it is filled with too much low frequencies. Spring Reverb has a simple high pass filter built in to provide control of the frequencies getting into the module. The high pass filter is located before the reverb tank in the signal path.
+/ | IN 1 <-> *OUT*,**DELAY** | / | / 
+/ | IN 2 <-> *OUT*,**ADSR** | / | / 
+/ | MIX <-> *IN 1*,**PROTOTYPE** | / 
+/ | MIX CV <-> *HPF*,**VCF**| / | /
+/ | WET <-> *IN 2*,**PROTOPYTE** | / | /
+VCF | / | / | A Voltage Controlled Filter removes a range of frequencies from an audio signal, with its cutoff frequency controlled by an external voltage. Fundamental VCF models a 4-pole transistor ladder filter with saturation at each stage.
+/ | FREQ knob | 0 | Cutoff frequency is set by the FREQ Knob. Its maximum values is 8400 Hz while minimum frequency is 15 Hz.
+/ | FINE knob | 0.53 | FINE controls fine-tuing of the filter Cutoff.
+/ | RES knob | 67.2 | Resonance works the same,it  is controlled by the RES Knob and can be modulated using the RES input, which has no attenuator. Resonance can be set to its maximum and the filter can be set in self-oscillating mode (e.g.it behaves more or less like an oscillator)
+/ | FREQ CV knob | 67.2 | /
+/ | DRIVE knob | 6.281 | The DRIVE knob allows to add gain to the filtered signal.
+/ | FREQ INPUT <-> / | / | /
+/ | RES INPUT <-> / | / | /
+/ | IN <-> *SAW*,**LFO-1** | / | /
+/ | LPF <-> *IN 3*,**PROTOTYPE** | / | LPF is -24dB/Oct. A LowPass and HighPass Filter at its outputs marked LPF and HPF.
+/ | HPF <-> *MIX CV*,**SPRING REVERB** | / | HPF is -12dB/Oct. A LowPass and HighPass Filter at its outputs marked LPF and HPF.
+PROTOTYPE | / | / | VCV Prototype offers 6 inputs, 6 outputs, 6 knobs, 6 RGB LEDs, 6 switches with RGB LEDs, and a console display for your script to interact with the VCV Rack world.
+/ | S1, K1 knob, IN 1 <-> *MIX*,**SPRING REVERB** | 1 | / 
+/ | S2, K2 knob, IN 2 <-> *WET*,**SPRING REVERB** |  0.502 | /
+/ | S3, K3 knob, IN 3 <-> *LPF*,**VCF** | 0 | /
+/ | S4, K4 knob, IN 4 <-> / | 0 | /
+/ | S5, K5 knob, IN 5 <-> / | 0 | /
+/ | S6, K6 knob, IN 6 <-> / | 0 | /
+MIXER | / | / | A mixer is a central piece of our module setup. A mixer allows us to have serveral sources of sound within our setup and be able to balance these sounds to the levels we need.
+/ | CV <-> / | / | /
+/ | LEVEL | 3.8958 | / 
+/ | MIX <-> *1*+*2*,**TO DEVICE**, **AUDIO-8** | / | /
+/ | IN 1 <-> *OUT 2*,**PROTOTYPE** | -4.3965 | /
+/ | IN 2 <-> *OUT 1*,**PROTOTYPE** | 6.0902 | /
+/ | IN 3 <-> / | / | /
+/ | IN 4 <-> / | / | /
+/ | CV 1 <-> / | / | /
+/ | CV 2 <-> / | / | /
+/ | CV 3 <-> / | / | /
+/ | CV 4 <-> / | / | /
+/ | CH 1 <-> *X IN*,**SCOPE**; + *L/MON*,**REC** | / | /
+/ | CH 2 <-> *Y IN*,**SCOPE**; + *RIGHT*,**REC** | / | /
+/ | CH 3 <-> / | / | /
+/ | CH 4 <-> / | / | /
+
              
