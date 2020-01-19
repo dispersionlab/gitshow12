@@ -44,6 +44,7 @@ Time  | Description  | Sound Info
  **Analysis of Sound Patch**
  
 >![Last Patch_VCV_week01](https://66.media.tumblr.com/36b0694762aad0c3d09a1a9dfae72183/17dc70bea5bf6bea-fd/s540x810/d8b8640ccf6b698ef861ea2f93ea642a98ff5e80.png)
+>>*Last Patch_VCV_week01*
 
 ***Patch Parametres***
 
