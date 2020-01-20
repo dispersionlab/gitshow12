@@ -15,19 +15,19 @@
 >>* In the next version, I will supply additional tones, such as female voice, to abundant in the musical texture, and also reduce the volumes of the overfrequency pitches. 
 
 
-***Arrangements***
+>***Arrangements***
 
-Time | Description | Sound Info | 
-------------- | ------------- | ------------- 
-0:00.000 - 0:06.00 | Fade In | G5-A5(880), G5-B2, G6-A6(1.8k),B6-C#Db7 
-0:06.000 - 0:09.710 | Brief Präludium | C#Db2-B3,G5
-0:09.710 - 0:10.662 | Transient Period | /
-0:10.662 - 0:21.515/ x3, 0:44.744 | First Tone Principle x 3 | /
-0:44.744 - 1:24.156 | Secone Tone Principle | Ghost Conversation 01 (Start)
-1:24.156 - 1:27.774 | Transient Period | /
-1:27.774 - 1:58.048 | Secone Tone Principle | Ghost Conversation 02 (Middle)
-1:58.048 - 2:37.651 | Secone Tone Principle | Ghost Conversation 03 (End)
-2:37.651 - 3:39.150 | Fade Out | Ghost Conversation 04 (End) + low-frequency tone with schneidend sound of electronics (shattering)
+>Time | Description | Sound Info | 
+>------------- | ------------- | ------------- 
+>0:00.000 - 0:06.00 | Fade In | G5-A5(880), G5-B2, G6-A6(1.8k),B6-C#Db7 
+>0:06.000 - 0:09.710 | Brief Präludium | C#Db2-B3,G5
+>0:09.710 - 0:10.662 | Transient Period | /
+>0:10.662 - 0:21.515/ x3, 0:44.744 | First Tone Principle x 3 | /
+>0:44.744 - 1:24.156 | Secone Tone Principle | Ghost Conversation 01 (Start)
+>1:24.156 - 1:27.774 | Transient Period | /
+>1:27.774 - 1:58.048 | Secone Tone Principle | Ghost Conversation 02 (Middle)
+>1:58.048 - 2:37.651 | Secone Tone Principle | Ghost Conversation 03 (End)
+>2:37.651 - 3:39.150 | Fade Out | Ghost Conversation 04 (End) + low-frequency tone with schneidend sound of electronics (shattering)
 
 >**Modules Setting**
 
