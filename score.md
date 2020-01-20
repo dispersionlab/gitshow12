@@ -11,6 +11,11 @@
 
 **Compose Methodology**
 
+>>* I'm going to inherit the tone principle here as the Music Bed of the new sound and continue the ritornello form, especially Bach's work I mentioned upon.
+>>* In the next version, I will supply additional tones, such as female voice, to abundant in the musical texture, and also reduce the volumes of the overfrequency pitches.   
+
+>**Modules Setting**
+>*  
 
 *Tone Principle* 
 >![TonePrinciple_SoundCloud](https://66.media.tumblr.com/d4eb97ce8a20494e2ed631bd2d4efcb4/f6598e86ee9a4529-4b/s1280x1920/8268917b2f4c35f4488ed46aa70d1736a5249180.png)
