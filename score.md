@@ -15,7 +15,8 @@
 >>* In the next version, I will supply additional tones, such as female voice, to abundant in the musical texture, and also reduce the volumes of the overfrequency pitches. 
 
 
->>> Arrangements: 
+***Arrangements***
+
 Time | Description | Sound Info | 
 ------------- | ------------- | ------------- 
 0:00.000 - 0:06.00 | Fade In | G5-A5(880), G5-B2, G6-A6(1.8k),B6-C#Db7 
