@@ -8,7 +8,7 @@
 >![GhostYell_week02_Score_RacelarHO](https://66.media.tumblr.com/86b6431749e061aaf40b828f01a79b72/ef159a1cc3104246-c9/s1280x1920/44cd821e6e857f1f44499c4d928216df18d33db7.png)
 
 **Description**
->>>![Watch me Watch you](https://66.media.tumblr.com/c2d6632533fbcee3edd2e4ca3fdf4836/tumblr_oocspmTpq81u213fro1_500.gif)
+>>>>![Watch me Watch you](http://giacomohug.com/wp-content/uploads/2015/12/CCTV_4s_785_sito.gif)
 
 >**Compose Methodology**
 
@@ -52,4 +52,4 @@
 > Tone Princple:[Sound Cloud Playlist](https://soundcloud.com/racelar-ho/the-sound-of-air-mirrorgarden)
 > 
 > ---
-> ![Watch me Watch you](https://66.media.tumblr.com/c2d6632533fbcee3edd2e4ca3fdf4836/tumblr_oocspmTpq81u213fro1_500.gif)
+> >>>![Watch me Watch you](http://giacomohug.com/wp-content/uploads/2015/12/CCTV_4s_785_sito.gif)
