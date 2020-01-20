@@ -11,6 +11,7 @@
 
 **Compose Methodology**
 
+
 *Tone Principle* 
 >![TonePrinciple_SoundCloud](https://66.media.tumblr.com/d4eb97ce8a20494e2ed631bd2d4efcb4/f6598e86ee9a4529-4b/s1280x1920/8268917b2f4c35f4488ed46aa70d1736a5249180.png)
 > Tone Princple:[Sound Cloud Playlist](https://soundcloud.com/racelar-ho/the-sound-of-air-mirrorgarden)
