@@ -11,8 +11,8 @@
       "rightModuleId": 58,
       "data": {
         "audio": {
-          "driver": 5,
-          "deviceName": "Apple Inc.: Built-in Output",
+          "driver": 6,
+          "deviceName": "Speakers (Realtek(R) Audio)",
           "offset": 0,
           "maxChannels": 8,
           "sampleRate": 96000,
@@ -20,7 +20,7 @@
         }
       },
       "pos": [
-        92,
+        85,
         1
       ]
     },
@@ -32,7 +32,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.694442272
+          "value": 1.02600002
         },
         {
           "id": 1,
@@ -51,10 +51,9 @@
           "value": 0.113854736
         }
       ],
-      "leftModuleId": 72,
       "rightModuleId": 1,
       "pos": [
-        82,
+        75,
         1
       ]
     },
@@ -66,7 +65,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.282662094
+          "value": 0.805501282
         },
         {
           "id": 1,
@@ -85,10 +84,8 @@
           "value": 0.571000099
         }
       ],
-      "leftModuleId": 70,
-      "rightModuleId": 73,
       "pos": [
-        56,
+        49,
         2
       ]
     },
@@ -98,11 +95,9 @@
       "version": "1.1.6",
       "model": "Notes",
       "params": [],
-      "leftModuleId": 76,
-      "rightModuleId": 77,
       "text": "patch instructions:\n\n1. Choose an audio driver and device in the AUDIO-8 module.\n\n2. Drag knobs up/down. Hold Ctrl (Cmd on Mac) while dragging to fine-tune. Right-click knobs to edit, or double-click to initialize.\n\n3. Drag ports to create and move 3ables. Stack multiple cables on outputs by holding Ctrl (Cmd on Mac) and dragging from an output.\n\n4. Right-click on an empty rack space to add new modules.",
       "pos": [
-        123,
+        116,
         1
       ]
     },
@@ -118,11 +113,11 @@
         },
         {
           "id": 1,
-          "value": 0.737390578
+          "value": 0.270000011
         },
         {
           "id": 2,
-          "value": 0.220226765
+          "value": 0.487226874
         },
         {
           "id": 3,
@@ -161,13 +156,12 @@
           "value": 0.0
         }
       ],
-      "rightModuleId": 74,
       "data": {
         "path": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow12/module.js",
         "script": "\nconfig.frameDivider = 1\n// set buffersize of module\nconfig.bufferSize = 16\n\nvar phase = 0\nvar amp = 1\nvar mix;\nvar bias_cv\n// clamp a number to within a range\nlet clampNumber = (num, a, b) => Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b));\n\n// this is where the synthesis calculation occurs\nfunction process(block) {\n    // block.knobs[0] = 0.5\n\t// Knob ranges from -5 to 5 octaves\n\t// var pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n    // pitch += block.inputs[0][0]\n    \n    // input 2 on the prototype module corresponds to the 2nd index of the block.inputs array, i.e. block.inputs[1]\n    amp = block.inputs[1][0]\n\n    // compare the amplitude of the two signal inputs\n    compare = [block.inputs[0][0], block.inputs[1][0]]\n    // get the max\n    max = Math.max(...compare)\n    // get the min\n    min = Math.min(...compare)\n\n    // the 1st knob on the prototype module will affect the biasing between input 1 or 2    \n    var bias = block.knobs[0] * 2 - 1\n    \n    // bias_cv += bias * Math.pow(2, block.inputs[2][0]);\n    if(bias < 0.){\n        mix = clampNumber( ((Math.abs(bias) * min) + (bias * max) * max * block.inputs[2][0]), -10., 10.)\n    } else if (bias > 0.){\n        mix = clampNumber( ((bias * max) + ((bias * -1) * min) * min * block.inputs[2][0]), -10., 10.)\n    }\n\n    var freq = 1\n\t//display(\"Freq: \" + freq.toFixed(3) + \" Hz\")\n\n\t// Set all samples in output buffer: this is where each sample is calculated, hence the for...loop. \n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n        phase %= 1\n        // this is like the console.log output of the prototype module. unfortunately it only displays a single concatenated string. \n        display(\"Logic Module: max, min, mix\" + mix)\n        \n\t\t// Convert phase to sine output\n        //block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5 * amp\n        block.outputs[0][i] = max\n        block.outputs[1][i] = min\n        block.outputs[2][i] = mix\n\t}\n}\n"
       },
       "pos": [
-        85,
+        78,
         2
       ]
     },
@@ -179,7 +173,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 1,
@@ -187,7 +181,7 @@
         },
         {
           "id": 2,
-          "value": -6.08299541
+          "value": 2.44900155
         },
         {
           "id": 3,
@@ -209,7 +203,7 @@
       "leftModuleId": 46,
       "rightModuleId": 44,
       "pos": [
-        40,
+        33,
         1
       ]
     },
@@ -252,14 +246,13 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 74,
       "rightModuleId": 64,
       "data": {
         "lissajous": 0,
         "external": 0
       },
       "pos": [
-        103,
+        96,
         2
       ]
     },
@@ -271,7 +264,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.351487756
+          "value": 0.355500042
         },
         {
           "id": 1,
@@ -279,17 +272,15 @@
         },
         {
           "id": 2,
-          "value": 0.0806217194
+          "value": 0.851999819
         },
         {
           "id": 3,
-          "value": 0.736088991
+          "value": 0.773588896
         }
       ],
-      "leftModuleId": 71,
-      "rightModuleId": 72,
       "pos": [
-        70,
+        63,
         1
       ]
     },
@@ -301,7 +292,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0278541446
+          "value": 0.369854152
         },
         {
           "id": 1,
@@ -317,9 +308,8 @@
         }
       ],
       "leftModuleId": 44,
-      "rightModuleId": 71,
       "pos": [
-        58,
+        51,
         1
       ]
     },
@@ -331,7 +321,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.428017229
+          "value": 0.300517142
         },
         {
           "id": 1,
@@ -349,7 +339,7 @@
       "leftModuleId": 27,
       "rightModuleId": 43,
       "pos": [
-        50,
+        43,
         1
       ]
     },
@@ -369,7 +359,7 @@
         },
         {
           "id": 2,
-          "value": -44.4420128
+          "value": 18.8999939
         },
         {
           "id": 3,
@@ -391,7 +381,7 @@
       "leftModuleId": 48,
       "rightModuleId": 27,
       "pos": [
-        30,
+        23,
         1
       ]
     },
@@ -401,25 +391,10 @@
       "version": "1.4.0",
       "model": "Noise",
       "params": [],
-      "leftModuleId": 69,
       "rightModuleId": 46,
       "pos": [
-        27,
+        20,
         1
-      ]
-    },
-    {
-      "id": 49,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank20HP",
-      "params": [],
-      "leftModuleId": 60,
-      "rightModuleId": 81,
-      "style": 0.0,
-      "pos": [
-        109,
-        0
       ]
     },
     {
@@ -523,7 +498,7 @@
         "momentaryRunInput": true
       },
       "pos": [
-        27,
+        20,
         0
       ]
     },
@@ -535,7 +510,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.736226678
+          "value": 0.614726424
         },
         {
           "id": 1,
@@ -547,11 +522,11 @@
         },
         {
           "id": 3,
-          "value": 1.78887427
+          "value": 5.94387436
         },
         {
           "id": 4,
-          "value": 1.38540983
+          "value": 5.88541031
         },
         {
           "id": 5,
@@ -671,7 +646,7 @@
         "outputSaturation": 1
       },
       "pos": [
-        85,
+        78,
         0
       ]
     },
@@ -713,11 +688,11 @@
       "leftModuleId": 50,
       "rightModuleId": 57,
       "data": {
-        "lastPath": "/Users/RAC.H/Desktop/Cinematic Female Vocal 32.wav",
+        "lastPath": "D:\\Music\\Amen Break.wav",
         "oscstate": 1
       },
       "pos": [
-        47,
+        40,
         0
       ]
     },
@@ -729,11 +704,11 @@
       "params": [
         {
           "id": 0,
-          "value": -0.0849355236
+          "value": 0.0980645046
         },
         {
           "id": 1,
-          "value": 0.200080395
+          "value": -0.438919604
         },
         {
           "id": 2,
@@ -745,7 +720,7 @@
         },
         {
           "id": 4,
-          "value": 0.097248733
+          "value": 0.27574873
         },
         {
           "id": 5,
@@ -761,7 +736,7 @@
         },
         {
           "id": 8,
-          "value": 0.00456041098
+          "value": 0.43056044
         },
         {
           "id": 9,
@@ -773,7 +748,7 @@
         },
         {
           "id": 11,
-          "value": 0.958913565
+          "value": 0.640913606
         },
         {
           "id": 12,
@@ -793,7 +768,7 @@
         },
         {
           "id": 16,
-          "value": 0.155115604
+          "value": 0.395115584
         },
         {
           "id": 17,
@@ -821,7 +796,7 @@
         },
         {
           "id": 23,
-          "value": 0.111443222
+          "value": 0.451943249
         },
         {
           "id": 24,
@@ -870,7 +845,7 @@
         "mk2": true
       },
       "pos": [
-        65,
+        58,
         0
       ]
     },
@@ -882,11 +857,11 @@
       "params": [
         {
           "id": 0,
-          "value": 3.03541732
+          "value": 2.27041793
         },
         {
           "id": 1,
-          "value": 4.12333012
+          "value": 3.91333127
         },
         {
           "id": 2,
@@ -912,11 +887,11 @@
       "leftModuleId": 53,
       "rightModuleId": 54,
       "data": {
-        "lastPath": "/Users/RAC.H/Desktop/Musical composition filtered beeps bells_BLASTWAVEFX_00851.wav",
+        "lastPath": "D:\\Music\\Amen Break.wav",
         "oscstate": 1
       },
       "pos": [
-        56,
+        49,
         0
       ]
     },
@@ -948,9 +923,9 @@
         }
       ],
       "leftModuleId": 1,
-      "rightModuleId": 75,
+      "rightModuleId": 67,
       "pos": [
-        102,
+        95,
         1
       ]
     },
@@ -962,55 +937,55 @@
       "params": [
         {
           "id": 0,
-          "value": 0.725248933
+          "value": 0.0300000235
         },
         {
           "id": 1,
-          "value": 0.754923165
+          "value": 1.0
         },
         {
           "id": 2,
-          "value": 0.0146603882
+          "value": 0.31949994
         },
         {
           "id": 3,
-          "value": 9.14311123
+          "value": 0.0
         },
         {
           "id": 4,
-          "value": 6.74471092
+          "value": 0.0
         },
         {
           "id": 5,
-          "value": 0.0766764879
+          "value": 0.615176439
         },
         {
           "id": 6,
-          "value": 2.01536298
+          "value": 10.0
         },
         {
           "id": 7,
-          "value": 0.129203752
+          "value": 0.771775365
         },
         {
           "id": 8,
-          "value": 0.980122685
+          "value": 7.9401226
         },
         {
           "id": 9,
-          "value": 5.05348158
+          "value": 10.0
         },
         {
           "id": 10,
-          "value": 0.463370144
+          "value": 0.332499951
         },
         {
           "id": 11,
-          "value": 0.507745683
+          "value": 0.773999929
         },
         {
           "id": 12,
-          "value": 2.73248768
+          "value": 8.13599968
         },
         {
           "id": 13,
@@ -1030,7 +1005,7 @@
         },
         {
           "id": 17,
-          "value": -0.730292559
+          "value": -0.313000053
         },
         {
           "id": 18,
@@ -1038,15 +1013,15 @@
         },
         {
           "id": 19,
-          "value": -0.705768466
+          "value": -0.111768425
         },
         {
           "id": 20,
-          "value": -0.622404695
+          "value": 0.346595377
         },
         {
           "id": 21,
-          "value": 0.286712646
+          "value": 0.433712631
         },
         {
           "id": 22,
@@ -1074,7 +1049,7 @@
         },
         {
           "id": 28,
-          "value": -0.816453576
+          "value": -0.121999986
         },
         {
           "id": 29,
@@ -1086,7 +1061,6 @@
         }
       ],
       "leftModuleId": 51,
-      "rightModuleId": 49,
       "data": {
         "frozen": false,
         "freezeToggle": false,
@@ -1098,7 +1072,7 @@
         "outputSaturation": 1
       },
       "pos": [
-        97,
+        90,
         0
       ]
     },
@@ -1189,7 +1163,6 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 68,
       "rightModuleId": 50,
       "data": {
         "panelTheme": 0,
@@ -1203,39 +1176,8 @@
         "momentaryRunInput": true
       },
       "pos": [
-        7,
+        0,
         0
-      ]
-    },
-    {
-      "id": 62,
-      "plugin": "NYSTHI",
-      "version": "1.0.9",
-      "model": "MasterRecorder",
-      "params": [
-        {
-          "id": 0,
-          "value": 0.0
-        },
-        {
-          "id": 1,
-          "value": 0.0
-        },
-        {
-          "id": 2,
-          "value": 1.0
-        }
-      ],
-      "leftModuleId": 75,
-      "rightModuleId": 76,
-      "data": {
-        "nysthi_id": "MR_n8sdHak1",
-        "wavebits": 9,
-        "m_attenuation": 1.0
-      },
-      "pos": [
-        115,
-        1
       ]
     },
     {
@@ -1250,7 +1192,7 @@
         },
         {
           "id": 1,
-          "value": 1.45796871
+          "value": -0.67203176
         },
         {
           "id": 2,
@@ -1274,13 +1216,12 @@
         }
       ],
       "leftModuleId": 64,
-      "rightModuleId": 79,
       "data": {
-        "lastPath": "/Users/RAC.H/Desktop/RAD_TEXTURE_EDT_01.wav",
+        "lastPath": "D:\\Music\\Amen Break.wav",
         "oscstate": 1
       },
       "pos": [
-        126,
+        119,
         2
       ]
     },
@@ -1292,7 +1233,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0608539581
+          "value": 0.0
         },
         {
           "id": 1,
@@ -1314,7 +1255,7 @@
       "leftModuleId": 30,
       "rightModuleId": 63,
       "pos": [
-        116,
+        109,
         2
       ]
     },
@@ -1449,8 +1390,6 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 79,
-      "rightModuleId": 80,
       "data": {
         "frozen": false,
         "freezeToggle": true,
@@ -1462,239 +1401,231 @@
         "outputSaturation": 1
       },
       "pos": [
-        138,
+        131,
         2
       ]
     },
     {
-      "id": 68,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank4HP",
-      "params": [],
-      "leftModuleId": 83,
-      "rightModuleId": 61,
-      "style": 0.0,
+      "id": 66,
+      "plugin": "NYSTHI",
+      "version": "1.0.9",
+      "model": "PolySevenSeas",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        },
+        {
+          "id": 2,
+          "value": 0.0
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "value": 1.0
+        },
+        {
+          "id": 5,
+          "value": 0.0
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        },
+        {
+          "id": 7,
+          "value": 0.0
+        },
+        {
+          "id": 8,
+          "value": 0.0
+        },
+        {
+          "id": 9,
+          "value": 0.0
+        },
+        {
+          "id": 10,
+          "value": 0.0
+        },
+        {
+          "id": 11,
+          "value": 0.0
+        },
+        {
+          "id": 12,
+          "value": 0.0
+        },
+        {
+          "id": 13,
+          "value": 0.0
+        },
+        {
+          "id": 14,
+          "value": 0.0
+        },
+        {
+          "id": 15,
+          "value": 0.0
+        },
+        {
+          "id": 16,
+          "value": 0.0
+        },
+        {
+          "id": 17,
+          "value": 0.0
+        },
+        {
+          "id": 18,
+          "value": 0.0
+        },
+        {
+          "id": 19,
+          "value": 0.0
+        },
+        {
+          "id": 20,
+          "value": 0.0
+        },
+        {
+          "id": 21,
+          "value": 0.0
+        },
+        {
+          "id": 22,
+          "value": 0.0
+        },
+        {
+          "id": 23,
+          "value": 0.0
+        },
+        {
+          "id": 24,
+          "value": 0.0
+        }
+      ],
+      "data": {
+        "m_thread_high_priority": false,
+        "m_stop_animations": false,
+        "m_decimate_mode": 0,
+        "m_current_octave": 0,
+        "m_bank": 0.0,
+        "m_wave": 0.0,
+        "m_pw": 0.5,
+        "m_swarming": false,
+        "m_morphing": true,
+        "m_multithreaded": true,
+        "m_multithreaded_processing_block": 256,
+        "m_bank_navigator_scale": 4.0,
+        "m_global_original_file_name": "sevenseas_default",
+        "m_original_file_name_array": [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "m_swarming_vco_count": 8
+      },
       "pos": [
-        3,
+        109,
         0
       ]
     },
     {
-      "id": 69,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank3HP",
-      "params": [],
-      "rightModuleId": 48,
-      "style": 0.0,
-      "pos": [
-        24,
-        1
-      ]
-    },
-    {
-      "id": 70,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank3HP",
-      "params": [],
-      "leftModuleId": 78,
-      "rightModuleId": 4,
-      "style": 0.0,
-      "pos": [
-        53,
-        2
-      ]
-    },
-    {
-      "id": 71,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank4HP",
-      "params": [],
-      "leftModuleId": 43,
-      "rightModuleId": 32,
-      "style": 0.0,
-      "pos": [
-        66,
-        1
-      ]
-    },
-    {
-      "id": 72,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank4HP",
-      "params": [],
-      "leftModuleId": 32,
-      "rightModuleId": 2,
-      "style": 0.0,
-      "pos": [
-        78,
-        1
-      ]
-    },
-    {
-      "id": 73,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank20HP",
-      "params": [],
-      "leftModuleId": 4,
-      "style": 0.0,
-      "pos": [
-        64,
-        2
-      ]
-    },
-    {
-      "id": 74,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank3HP",
-      "params": [],
-      "leftModuleId": 17,
-      "rightModuleId": 30,
-      "style": 0.0,
-      "pos": [
-        100,
-        2
-      ]
-    },
-    {
-      "id": 75,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank3HP",
-      "params": [],
+      "id": 67,
+      "plugin": "VCV-Recorder",
+      "version": "1.0.1",
+      "model": "Recorder",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        }
+      ],
       "leftModuleId": 58,
-      "rightModuleId": 62,
-      "style": 0.0,
+      "data": {
+        "format": "wav",
+        "path": "D:\\Documents\\GitHub\\gitshow12/recording.wav",
+        "incrementPath": false,
+        "sampleRate": 44100,
+        "depth": 16,
+        "bitRate": 320000
+      },
       "pos": [
-        112,
+        105,
         1
-      ]
-    },
-    {
-      "id": 76,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank3HP",
-      "params": [],
-      "leftModuleId": 62,
-      "rightModuleId": 8,
-      "style": 0.0,
-      "pos": [
-        120,
-        1
-      ]
-    },
-    {
-      "id": 77,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank3HP",
-      "params": [],
-      "leftModuleId": 8,
-      "style": 0.0,
-      "pos": [
-        139,
-        1
-      ]
-    },
-    {
-      "id": 78,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank4HP",
-      "params": [],
-      "rightModuleId": 70,
-      "style": 0.0,
-      "pos": [
-        49,
-        2
-      ]
-    },
-    {
-      "id": 79,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank3HP",
-      "params": [],
-      "leftModuleId": 63,
-      "rightModuleId": 65,
-      "style": 0.0,
-      "pos": [
-        135,
-        2
-      ]
-    },
-    {
-      "id": 80,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank3HP",
-      "params": [],
-      "leftModuleId": 65,
-      "rightModuleId": 82,
-      "style": 0.0,
-      "pos": [
-        150,
-        2
-      ]
-    },
-    {
-      "id": 81,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank4HP",
-      "params": [],
-      "leftModuleId": 49,
-      "rightModuleId": 84,
-      "style": 0.0,
-      "pos": [
-        129,
-        0
-      ]
-    },
-    {
-      "id": 82,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank4HP",
-      "params": [],
-      "leftModuleId": 80,
-      "style": 0.0,
-      "pos": [
-        153,
-        2
-      ]
-    },
-    {
-      "id": 83,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank3HP",
-      "params": [],
-      "rightModuleId": 68,
-      "style": 0.0,
-      "pos": [
-        0,
-        0
-      ]
-    },
-    {
-      "id": 84,
-      "plugin": "ModularFungi",
-      "version": "1.0.0",
-      "model": "Blank3HP",
-      "params": [],
-      "leftModuleId": 81,
-      "style": 0.0,
-      "pos": [
-        133,
-        0
       ]
     }
   ],
@@ -2060,22 +1991,6 @@
       "color": "#0c8e15"
     },
     {
-      "id": 495,
-      "outputModuleId": 58,
-      "outputId": 0,
-      "inputModuleId": 62,
-      "inputId": 0,
-      "color": "#0986ad"
-    },
-    {
-      "id": 496,
-      "outputModuleId": 58,
-      "outputId": 0,
-      "inputModuleId": 62,
-      "inputId": 1,
-      "color": "#c9b70e"
-    },
-    {
       "id": 503,
       "outputModuleId": 65,
       "outputId": 1,
@@ -2089,6 +2004,14 @@
       "outputId": 0,
       "inputModuleId": 64,
       "inputId": 3,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 507,
+      "outputModuleId": 58,
+      "outputId": 0,
+      "inputModuleId": 67,
+      "inputId": 2,
       "color": "#0c8e15"
     }
   ]
