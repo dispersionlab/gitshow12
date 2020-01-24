@@ -1,166 +1,55 @@
->> gif file:  
->> ![last Patch](extensions/recording4-005.gif "Last Patch")
+
+>>> >> gif file:  
+>>> 
+>>> ![last Patch](extensions/recording4-005.gif "Last Patch")
+
+>**GhostYell_week02_Score_RacelarHO**
+
+>>![GhostYell_week02_Score_RacelarHO](https://66.media.tumblr.com/86b6431749e061aaf40b828f01a79b72/ef159a1cc3104246-c9/s1280x1920/44cd821e6e857f1f44499c4d928216df18d33db7.png)
+
+>**Description**
+>>>>![Watch me Watch you](http://giacomohug.com/wp-content/uploads/2015/12/CCTV_4s_785_sito.gif)
+
+>>**Compose Methodology**
+
+>>>* I'm going to inherit the tone principle here as the Music Bed of the new sound and continue the ritornello form, especially Bach's work I mentioned upon.
+>>* In the next version, I will supply additional tones, such as female voice, to abundant in the musical texture, and also reduce the volumes of the overfrequency pitches. 
+
+
+>>***Arrangements***
+>>>![Arrangements](https://66.media.tumblr.com/6fc916fa1448f87017679d0e701c0245/f798edb7e8d612af-6c/s1280x1920/5d4e53fb4abcbd09936081f5c8bde998d82775dd.png)
+
+>>Time | Description | Sound Info | 
+>>------------- | ------------- | ------------- 
+>>0:00.000 - 0:06.00 | Fade In | G5-A5(880), G5-B2, G6-A6(1.8k),B6-C#Db7 
+>>0:06.000 - 0:09.710 | Brief Präludium | C#Db2-B3,G5
+>>0:09.710 - 0:10.662 | Transient Period | /
+>>0:10.662 - 0:21.515/ x3, 0:44.744 | First Tone Principle x 3 | /
+>>0:44.744 - 1:24.156 | Secone Tone Principle | Ghost Conversation 01 (Start)
+>>1:24.156 - 1:27.774 | Transient Period | /
+>>1:27.774 - 1:58.048 | Secone Tone Principle | Ghost >Conversation 02 (Middle)
+>1:58.048 - 2:37.651 | Secone Tone Principle | Ghost Conversation 03 (End)
+>2:37.651 - 3:39.150 | Fade Out | Ghost Conversation 04 (End) + low-frequency tone with schneidend sound of electronics (shattering)
+
+>>**Modules Setting**
+
+>> Module | PLAN | info. | /
+>> ------------- | ------------- | ------------- | -------------
+>>> CLOCKED x 2 | provide rhythm&special musical texture to sound | BPM 180/ 60; RATIO: /12; x1; x1; | ![CLOCKED](https://66.media.tumblr.com/5c821d486335222e31d9f25b40322e4d/277efcdc2258289c-66/s250x400/1febb59db0f30401cd62213ce7554467de44a58d.png)
+>> TRUMMOR^2 x 1 | provide rhythm&special musical texture to sound | random | ![TRUMMOR^2](https://66.media.tumblr.com/d95f771abd0112e9f918788f57ee7a56/6619620a72e611e2-72/s1280x1920/905b082367236e902ad84f49d6a47d4887fa6560.png)
+>> PLATEAU x 3 | provide variation&special musical texture to sound | random | ![PLATEAU](https://66.media.tumblr.com/e4cd4815088f26984cdb705528b0c488/277efcdc2258289c-d7/s250x400/343139c84d67573b85eee17f30efe880efce37be.png)
+>>  NOIS x 1 | noise | white&pink | ![NOIS](https://66.media.tumblr.com/32cbee2730d6853f475260a08b4da26a/277efcdc2258289c-69/s640x960/ed44a4392a788ecf56fa984baea050c8c31e817d.png)
+>> VCO-1 x 1 | Output Waveforms | week01 | ![VCO-1](https://66.media.tumblr.com/4f62979f909731c6dc07d9f73ba00bd3/277efcdc2258289c-f9/s400x600/ec87f604387dd7b6f9fc92c1e555c7b01a30a3d2.png)
+>> LFO-1 x 1 | Wave Types | week01 | ![LFO-1](https://66.media.tumblr.com/74f24b32248e170aad0a1fb736e287de/277efcdc2258289c-d9/s640x960/269c4a66f45c463861148605fd25c132c51584d1.png)
+>> ADSR x 1 | Variations | week01 | ![ADSR](https://66.media.tumblr.com/f5bd318ba64ffbaf232bc83bfc01d06c/277efcdc2258289c-1b/s640x960/7ef4483b607e7869d2fb7f8935765ec03ecca1ba.png)
+>> Delay x 1 | Take a sound and repeat it | week01 | ![Delay](https://66.media.tumblr.com/182cf187ff0f8e24f43d25ec1fee3a5a/277efcdc2258289c-eb/s640x960/b9abc9a2e74cea5de860064e87defbe9aaad9088.png)
+>> VCF x 1 | A Voltage Controlled Filter removes a range of frequencies from an audio signal, with its cutoff frequency controlled by an external voltage. | week01 | ![VCF](https://66.media.tumblr.com/5e88b93c313ce6ece673109abdcd325c/277efcdc2258289c-b1/s640x960/5ee8166e956b8fa967a7842181bec1358f03bf80.png)
+>> SPRING REVERB x 1 | To emulate the ambient sound of a room by using a spring connected to a sound generator | week01 | ![SPRING REVERB](https://66.media.tumblr.com/029f54468c8e488c293bdf3ad5979db7/277efcdc2258289c-42/s640x960/a3475706ce86254ff01a1ca3b4833b89ef8087db.png)
+
+
+>*Tone Principle* 
+>>![TonePrinciple_SoundCloud](https://66.media.tumblr.com/d4eb97ce8a20494e2ed631bd2d4efcb4/f6598e86ee9a4529-4b/s1280x1920/8268917b2f4c35f4488ed46aa70d1736a5249180.png)
+>> Tone Princple:[Sound Cloud Playlist](https://soundcloud.com/racelar-ho/the-sound-of-air-mirrorgarden)
 >> 
->> 
->> 
->> 
-------
-
-## Reflection of Last Patch_week01
-![Last Patch_SoundSegmentation_week01](https://66.media.tumblr.com/3d72b67f528a27ccc8e008c1e73f11ed/17dc70bea5bf6bea-f8/s540x810/6a6a86bc8d6841eea3801dd3b325cd283290ce15.png)
-
-------
-
-**Analysis of Sound Segmentation**
-
-
->***Sound Info***
-
->>* Duration: 1:19.992
->>* Sample Rate: 44100 Hz
->>* Channels: Stereo
->>* Bit Depth: 16-bit
->>* Format: Waveform Audio 16-bit Integer 
->>
->>This patch consists of one tone principle which has low-frequency tones with scratchy sound of electronics. It consists of four parts with two sets of contrasted representation: Lengthen vs Shorten, Shattered vs Proceed. 
-
----
-
->***Comment_RacelarHo***
-
->>* The homophony here consists of the dialling-signal-like sounds, and it reminds me of the Electronic Music of the 1960s, especially the concept of Cybernetics.
->>* Compared with the general Experimental Music, this work avoids the regular forms, such as forma sonata, variation form and rondo form, but employs ritornello form with more stretchable amplitudes and intensities. Reference: the 59 - 69 syllable (the epilogue of Episode 6) of Bach's Violin Concerto in E Major. 
-
----
->***Inspiration_week02_RacelarHo***
-
->>* I'm going to inherit the tone principle here as the Music Bed of the new sound and continue the ritornello form, especially Bach's work I mentioned upon.
->>* In the next version, I will supply additional tones, such as female voice, to abundant in the musical texture, and also reduce the volumes of the overfrequency pitches.   
- 
----
-
-**Initial Sound Segmentations_Week01**
-
-Time  | Description  | Sound Info
-------------- | ------------- | -------------
-0:00.00 ~ 0:05.30 | fade in | Blank 
-0:05.30 ~ 0:14.00 | the first set of mixed highs | aliasing distortion, broad-band noise spectrum of frasonic frequency and infrasonic frequency
-0:14.00 ~ 0:16.143 | transient period | Blank
-0:16.143 ~ 0:16.192 | brief fade in | low-frequency tone x 4, 0:00:103 per set
-0:16.192 ~ 0:29.500 | tone principle 01 | low-frequency tone with schneidend sound of electronics (shattering) 
-0:29.500 ~ 0:30.000 | transient period | low-frequency tone
-0:30.000 ~ 0:47.000 | tone principle 02 | infrasonic tone with schneidend sound of glitchy electronics (sequential)
-0:47.000 ~ 0:49.300 | transient period | low-frequency tone
-0:49:300 ~ 0:57.800 | tone principle 03 | low-frequency tone with schneidend sound of electronics (shorten, stable)
-0:57.800 ~ 1:00.100 | transient period | low-frequency tone
-1:00.100 ~ 1:17.150 | tone principle 04 | low-frequency tone with schneidend sound of electronics (lengthen, shattering)
-1:17.150 ~ 1:19.992 | fade out | low-frequency tone (lengthen)
- 
- ---
- **Analysis of Sound Patch**
- 
->![Last Patch_VCV_week01](https://66.media.tumblr.com/36b0694762aad0c3d09a1a9dfae72183/17dc70bea5bf6bea-fd/s540x810/d8b8640ccf6b698ef861ea2f93ea642a98ff5e80.png)
->>*Last Patch_VCV_week01*
-
-***Patch Parametres***
-
-
-Module  | Descriptions  | Parameters Info  |  Definitions
-------------- | ------------- | ------------- | -------------
-Nois | WHT <--> *FM*, **VCO-1** | / | White noise has equal intensities at all frequencies. Each voltage is sampled from a normal distribution.
-/ | PINK <--> *FM1*, **LFO-1** | / | Pink noise has more bass, and its intensity decreases by -3 dB/octave.     
-/ | RED <--> /  |  / | Red noise has even more bass, and its intensity decreases by -6 dB/octave.
-Nois | VIOL <--> / | / | Violet noise has even more treble, and its intensity increases by +6 dB/octave.
-/ | BLUE <--> / | / | Blue noise has more treble than white noise, and its intensity increases by +3 dB/octave.
-/ | GRAY <--> / | / | Gray noise is calibrated to a psychoacoustic equal loudness curve. The human ear does not hear all frequencies with equal intensity (e.g. white noise sounds louder around 1000 Hz than 100 Hz, although its actual power density is the same), so a filter with an equal loudness frequency response is needed to produce noise that sounds uniform across the audible frequency range. In particular, the gray noise generated by VCV Noise is inverse A-weighted.
-/ | BLCK <--> / | / | Black noise has no single standard definition, so VCV Noise defines it as “uniform noise”, i.e. voltages sampled from a uniform distribution. Uniform noise has nearly the same frequency response as white noise, except that it contains aliasing. This effect is similar to early digital noise generators or poorly-designed software noise algorithms. However, uniform noise is useful for sample-and-hold sources, CV, and other non-audio purposes.
-VCO-1 | / | / | VCO-1 module is a traditional analog/digital oscillator with four output waveforms: SIN (sine), TRI (triangle), SAW (sawtooth), and SQR (square). 
-/ | ANLG/DIG <--> **ANLG** | / | ANLG position, analog-modeled waveforms are used. In most cases, like subtractive synthesis, analog waveforms are often preferred due to their imperfect and “more musical” harmonics. ![VOL-1_ANLG_01](https://vcvrack.com/images/Fundamental/VCO-sine.png)![VOL-1_ANLG_02](https://vcvrack.com/images/Fundamental/VCO-tri.png)![VOL-1_ANLG_03](https://vcvrack.com/images/Fundamental/VCO-saw.png)![VOL-1_ANLG_04](https://vcvrack.com/images/Fundamental/VCO-square.png)
-/ | **FREQ** knob | 43.257 | The pitch of each oscillator is controlled by the FREQ knob, with a range of 9 octaves. 
-/ | HARD/SOFT <--> **SOFT** | 43.257 | SOFT position, soft-sync is used instead, which reverses the direction of the waveform when the sync signal passes through 0V. This results in a “softer” effect with fewer harmonics than hard-sync.
-/ | **FINE** knob | -0.123 | FINE knob (only on VCO-1), with an additional range of 2 semitones. 
-/ | **P.WIDTH** knob | 75.725 | P. WIDTH knob adjusts the pulse width (aka duty cycle) of the square waveform
-/ | **FM CV** knob | 63 | PWM input and its PWM CV attenuator knob allow external pulse width control.               
-/ | **PWM.CV** knob | 58.5 | PWM input and its PWM CV attenuator knob allow external pulse width control.
-/ | V/OCT | / | FINE
-/ | FM <-> *WHT*,**NOIS** | / | FM input applies an additional pitch adjustment with an included FM CV attenuator knob. With the FM CV knob hard-right, the FM input functions similarly to the V/OCT input.
-/ | SYNC | / | SYNC input applies hard-syncing to the waveforms by resetting the phase of the waveform when the sync signal passes upward through 0V. If an audio-rate signal is patched into the SYNC input, the result is a waveform having characteristics of both the internal and sync frequencies.           
-/ | PWM <-> *SIN*,**VCO-1** | / | PWM input and its PWM CV attenuator knob allow external pulse width control. The following are examples of a digital square wave with 1%, 25%, 50%, and 75% pulse width. ![PWM Pulse Width_01](https://vcvrack.com/images/Fundamental/VCO-01square.png)    ![PWM Pulse Width_02](https://vcvrack.com/images/Fundamental/VCO-25square.png)       ![PWM Pulse Width_03](https://vcvrack.com/images/Fundamental/VCO-50square.png)![PWM Pulse Width_04](https://vcvrack.com/images/Fundamental/VCO-75square.png)
-/ | SIN <-> PWM + *Attack*,**ADSR**; + *Sustain*,**ADSR** | *Attack*,**ADSR**:51.531; *Sustain*,**ADSR**: 60.35; | SIN(sine) is one of the four output waveform in VCO-1 (traditional analogy/digital oscillar).
-/ | TRI <-> *CV*,**ADSR** | DEC:263.03 | TRI (triangle)is one of the four output waveform in VCO-1 (traditional analogy/digital oscillar).   
-/ | SAW <-> *CV*,**DELAY** | FDBK:72.7  | SAW (sawtooth)s one of the four output waveform in VCO-1 (traditional analogy/digital oscillar).                         
-/ | SQR <-> *CV*,**DELAY** | TIME:0.26062 | SQR (square)is one of the four output waveform in VCO-1 (traditional analogy/digital oscillar). 
-LFO-1 | / | / | LFO-1 can produce four wave types: Sine, Triangle, Saw, and Square. LFO-1 is a low-frequency flavor of VCO-1, with an additional FM Input in place of the VCO's 1/v Oct and a Reset input in place of the VCO-1's Sync input. Patch the LFO's square wave output [SQR] into the gate input of the ADSR.
-/ | UNI/BI <-> **BI**  |  /  |  The UNI/BI switch toggles between unipolar (0V to 10V) and bipolar (-5V to 5V) output voltages.
-/ | FREQ | 0.014751 |  /
-/ | 0/180 <-> **180** | / | Phrase Range
-/ | FM 1 CV | 68.4 | /
-/ | P.WIDTH | 67.199 | /
-/ | FM 2 CV | 67.199 | /
-/ | PWM CV | 0 |/
-/ | FM1 <-> *SIN*,**VCO-1** | / | /
-/ | FM2 <-> / | / |
-/ | RESET | / | /
-/ | SIN, *CV*,**ADSR** | REL:1958.9 | /
-/ | TRI, *Gate*,**ADSR** | / | /
-/ | SAW, *IN*,**VCF** | / | /
-/ | SQR | / | /
-ADSR | / | / | ADSR module manipulates the variables of Attack, Decay, Sustain, and Release easily. 
-/ | CV,Attack <-> *SIN*,**VCO-1** | 51.531 | Attack in ADSR is the amount of time it takes from when you first press a key until you hear the full volume of a note's sound.
-/ | CV, Decay <-> *TRI*,**VCO-1** | 263.03 | Decay is the amount of TIME it takes for a sound to go from its maximum volume to its minimum volum while still holding a key down.
-/ | CV, Sustain <-> *SIN*,**VCO-1** | 60.45 | Sustain is the difference in volume from the beginning of sound to the minimum level of sound while still pressing a key down. It is useful to consider Sustain and Decay at the same time as they are closely connected. 
-/ | CV, Release <-> *SIN*,**LFO-1** | 1958.9 | Release is the amount of time it takes for the sound to go to silence after a note has been released. The image here has a very long slow Release.
-/ | Gate <-> *TRI*,**LFO-1** | / | GATE output generates 10V
-/ | RETRIG <-> / | / | Socket " is the ADSR’s retrigger input, which can be connected, for instance, to the output from an LFO. That means that while the gate is open, the envelope re-triggers every time it senses a pulse from the LFO.
-/ | OUT <-> *IN*,**DELAY**; + *IN2*,**SPRING REVERB** | / | /
-DELAY | / | / | Delay or 'echo' is a workhorse in any studio. Delay allows us to take a sound and repeat it. We have control over the speed of the repeat as well as the number of times it repeats. Delay can be used to add very nice textures and effects to any performance.
-/ | CV, Time <-> *SQR*,**VCO-1** | 0.26062 | Time allows us to adjust the time between repeated sounds. Further to the left can take the sounds down to the milliseconds and to the right provides a delay seconds in duration. Rotating the control to the right can create such fast repeated sounds that it can result in some fascinating textures.
-/ | CV, Feedback <-> *SAW*,**VCO-1** | 72.7 | If Time controls the lenght of time between repeated sounds Feedback controls the time it takes for the repeated sounds to fade away to silence. Turning the control all the way to the left will have the sound fade away instantly and all the way to the right will have the sound repeating on and on with now decrease in volume level
-/ | CV, Colour <-> / | 70.1 | Colours of noise, each with a different characteristic and frequency response.
-/ | CV, Mix <-> / | 90.05 | /
-SPRING REVERB | A spring reverb is a technology which allowed sound engineers to emulate the ambient sound of a room by using a spring connected to a sound generator. A sound could be played into the spring via the sound generator then a mic would pick up the resulting reverb sound. The 'Reverb Tanks' could be quite small and durable making them excellent for amplifiers and such. Befaco's Spring Reverb uses software to emulate the sound of the tank.
-/ | DRY/WET knob | 23.25 | A 'dry' signal refers to an original signal which has not had any alterations. A 'wet' signal is the full altered signal. 
-/ | CV IN 1 <-> / | 60 | There are two sliders on Spring Reverb. Each are for one of the two inputs. These sliders govern the amount of signal coming in from the input and being sent to the reverb tank. If you have a CV device connected to these sliders then they act as an attenuator for the signal on that input.
-/ | CV IN 2 <-> / | 70 | There are two sliders on Spring Reverb. Each are for one of the two inputs. These sliders govern the amount of signal coming in from the input and being sent to the reverb tank. If you have a CV device connected to these sliders then they act as an attenuator for the signal on that input.
-/ | High Pass Filter | 0.7335 | A high pass filter reduces the amount of low frequencies which are allowed to pass through a device. This is very important in a Spring Reverb as these sorts of reverbs can become overloaded if it is filled with too much low frequencies. Spring Reverb has a simple high pass filter built in to provide control of the frequencies getting into the module. The high pass filter is located before the reverb tank in the signal path.
-/ | IN 1 <-> *OUT*,**DELAY** | / | / 
-/ | IN 2 <-> *OUT*,**ADSR** | / | / 
-/ | MIX <-> *IN 1*,**PROTOTYPE** | / 
-/ | MIX CV <-> *HPF*,**VCF**| / | /
-/ | WET <-> *IN 2*,**PROTOPYTE** | / | /
-VCF | / | / | A Voltage Controlled Filter removes a range of frequencies from an audio signal, with its cutoff frequency controlled by an external voltage. Fundamental VCF models a 4-pole transistor ladder filter with saturation at each stage.
-/ | FREQ knob | 0 | Cutoff frequency is set by the FREQ Knob. Its maximum values is 8400 Hz while minimum frequency is 15 Hz.
-/ | FINE knob | 0.53 | FINE controls fine-tuing of the filter Cutoff.
-/ | RES knob | 67.2 | Resonance works the same,it  is controlled by the RES Knob and can be modulated using the RES input, which has no attenuator. Resonance can be set to its maximum and the filter can be set in self-oscillating mode (e.g.it behaves more or less like an oscillator)
-/ | FREQ CV knob | 67.2 | /
-/ | DRIVE knob | 6.281 | The DRIVE knob allows to add gain to the filtered signal.
-/ | FREQ INPUT <-> / | / | /
-/ | RES INPUT <-> / | / | /
-/ | IN <-> *SAW*,**LFO-1** | / | /
-/ | LPF <-> *IN 3*,**PROTOTYPE** | / | LPF is -24dB/Oct. A LowPass and HighPass Filter at its outputs marked LPF and HPF.
-/ | HPF <-> *MIX CV*,**SPRING REVERB** | / | HPF is -12dB/Oct. A LowPass and HighPass Filter at its outputs marked LPF and HPF.
-PROTOTYPE | / | / | VCV Prototype offers 6 inputs, 6 outputs, 6 knobs, 6 RGB LEDs, 6 switches with RGB LEDs, and a console display for your script to interact with the VCV Rack world.
-/ | S1, K1 knob, IN 1 <-> *MIX*,**SPRING REVERB** | 1 | / 
-/ | S2, K2 knob, IN 2 <-> *WET*,**SPRING REVERB** |  0.502 | /
-/ | S3, K3 knob, IN 3 <-> *LPF*,**VCF** | 0 | /
-/ | S4, K4 knob, IN 4 <-> / | 0 | /
-/ | S5, K5 knob, IN 5 <-> / | 0 | /
-/ | S6, K6 knob, IN 6 <-> / | 0 | /
-MIXER | / | / | A mixer is a central piece of our module setup. A mixer allows us to have serveral sources of sound within our setup and be able to balance these sounds to the levels we need.
-/ | CV <-> / | / | /
-/ | LEVEL | 3.8958 | / 
-/ | MIX <-> *1*+*2*,**TO DEVICE**, **AUDIO-8** | / | /
-/ | IN 1 <-> *OUT 2*,**PROTOTYPE** | -4.3965 | /
-/ | IN 2 <-> *OUT 1*,**PROTOTYPE** | 6.0902 | /
-/ | IN 3 <-> / | / | /
-/ | IN 4 <-> / | / | /
-/ | CV 1 <-> / | / | /
-/ | CV 2 <-> / | / | /
-/ | CV 3 <-> / | / | /
-/ | CV 4 <-> / | / | /
-/ | CH 1 <-> *X IN*,**SCOPE**; + *L/MON*,**REC** | / | /
-/ | CH 2 <-> *Y IN*,**SCOPE**; + *RIGHT*,**REC** | / | /
-/ | CH 3 <-> / | / | /
-/ | CH 4 <-> / | / | /
-
-             
+>> ---
+>> >>>![Watch me Watch you](http://giacomohug.com/wp-content/uploads/2015/12/CCTV_4s_785_sito.gif)
