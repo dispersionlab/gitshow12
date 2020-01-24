@@ -53,3 +53,7 @@
 >> 
 >> ---
 >> >>>![Watch me Watch you](http://giacomohug.com/wp-content/uploads/2015/12/CCTV_4s_785_sito.gif)
+
+This piece is very atmospheric. The quiet human voices and whispered are punctuated y the occasional metallic grinning or sliding sound. There is a subtle metallic clicking as well, that slowly disappears as the piece progresses. This sound also punctuates the sweeping, winglike sounds throughout the piece.
+
+At about 1:05, what sounds like another kind of human vocal starts. It almost sounds like a distant scream, or a kettle boiling. At around 2:10, there is a high pitch squeaking noise. While the noise itself sound artificial the way it behaves sounds like n animal. Throughout the piece, at different times, a low rumbling base rises and falls. This makes the entire piece feel like its in some kind of cavern.  
