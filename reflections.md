@@ -56,4 +56,6 @@
 
 This piece is very atmospheric. The quiet human voices and whispered are punctuated y the occasional metallic grinning or sliding sound. There is a subtle metallic clicking as well, that slowly disappears as the piece progresses. This sound also punctuates the sweeping, winglike sounds throughout the piece.
 
-At about 1:05, what sounds like another kind of human vocal starts. It almost sounds like a distant scream, or a kettle boiling. At around 2:10, there is a high pitch squeaking noise. While the noise itself sound artificial the way it behaves sounds like n animal. Throughout the piece, at different times, a low rumbling base rises and falls. This makes the entire piece feel like its in some kind of cavern.  
+At about 1:05, what sounds like another kind of human vocal starts. It almost sounds like a distant scream, or a kettle boiling. At around 2:10, there is a high pitch squeaking noise. While the noise itself sound artificial the way it behaves sounds like n animal. Throughout the piece, at different times, a low rumbling base rises and falls. This makes the entire piece feel like its in some kind of cavern. 
+
+This iteration of the piece involved changing and reordering several of the reverberation producing modules, as well as the inclusion of new mixer modules to better play the piece. Some experimentation with automating the mixer volumes was attempted, however this will require further practice and experimentation in order to create a more structured piece. 
