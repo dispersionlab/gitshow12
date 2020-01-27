@@ -7,9 +7,12 @@
       "version": "1.1.6",
       "model": "AudioInterface",
       "params": [],
+      "leftModuleId": 58,
+      "rightModuleId": 67,
       "data": {
         "audio": {
           "driver": 6,
+          "deviceName": "Speakers (Realtek(R) Audio)",
           "offset": 0,
           "maxChannels": 8,
           "sampleRate": 96000,
@@ -17,7 +20,7 @@
         }
       },
       "pos": [
-        121,
+        132,
         1
       ]
     },
@@ -29,7 +32,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.398999989
+          "value": 0.0
         },
         {
           "id": 1,
@@ -48,9 +51,9 @@
           "value": 0.113854736
         }
       ],
-      "leftModuleId": 32,
+      "rightModuleId": 72,
       "pos": [
-        71,
+        82,
         1
       ]
     },
@@ -62,7 +65,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.538501322
+          "value": 0.279001117
         },
         {
           "id": 1,
@@ -82,8 +85,8 @@
         }
       ],
       "pos": [
-        18,
-        2
+        10,
+        1
       ]
     },
     {
@@ -172,7 +175,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.0
+          "value": 0.0
         },
         {
           "id": 1,
@@ -180,7 +183,7 @@
         },
         {
           "id": 2,
-          "value": 1.26099443
+          "value": -0.0350055471
         },
         {
           "id": 3,
@@ -246,6 +249,7 @@
         }
       ],
       "leftModuleId": 17,
+      "rightModuleId": 63,
       "data": {
         "lissajous": 0,
         "external": 0
@@ -263,7 +267,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.48300004
+          "value": 0.815499902
         },
         {
           "id": 1,
@@ -278,9 +282,9 @@
           "value": 0.773588896
         }
       ],
-      "rightModuleId": 2,
+      "leftModuleId": 71,
       "pos": [
-        63,
+        67,
         1
       ]
     },
@@ -308,6 +312,7 @@
         }
       ],
       "leftModuleId": 44,
+      "rightModuleId": 71,
       "pos": [
         51,
         1
@@ -359,7 +364,7 @@
         },
         {
           "id": 2,
-          "value": 13.8779974
+          "value": -35.0460052
         },
         {
           "id": 3,
@@ -378,22 +383,9 @@
           "value": 0.585000157
         }
       ],
-      "leftModuleId": 48,
       "rightModuleId": 27,
       "pos": [
         23,
-        1
-      ]
-    },
-    {
-      "id": 48,
-      "plugin": "Fundamental",
-      "version": "1.4.0",
-      "model": "Noise",
-      "params": [],
-      "rightModuleId": 46,
-      "pos": [
-        20,
         1
       ]
     },
@@ -645,7 +637,7 @@
         "outputSaturation": 1
       },
       "pos": [
-        98,
+        78,
         0
       ]
     },
@@ -834,6 +826,7 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 57,
       "rightModuleId": 51,
       "data": {
         "mod_a": 20,
@@ -843,7 +836,7 @@
         "mk2": true
       },
       "pos": [
-        78,
+        58,
         0
       ]
     },
@@ -883,6 +876,7 @@
         }
       ],
       "leftModuleId": 53,
+      "rightModuleId": 54,
       "data": {
         "lastPath": "D:\\Music\\Amen Break.wav",
         "oscstate": 1
@@ -900,7 +894,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.656999946
+          "value": 0.414000034
         },
         {
           "id": 1,
@@ -919,9 +913,10 @@
           "value": 0.773235679
         }
       ],
-      "leftModuleId": 72,
+      "leftModuleId": 64,
+      "rightModuleId": 1,
       "pos": [
-        103,
+        122,
         1
       ]
     },
@@ -1064,13 +1059,14 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 64,
+      "leftModuleId": 30,
+      "rightModuleId": 75,
       "data": {
         "lastPath": "D:\\Music\\Amen Break.wav",
         "oscstate": 1
       },
       "pos": [
-        119,
+        86,
         2
       ]
     },
@@ -1082,7 +1078,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.501000047
+          "value": 0.0
         },
         {
           "id": 1,
@@ -1102,10 +1098,10 @@
         }
       ],
       "leftModuleId": 70,
-      "rightModuleId": 63,
+      "rightModuleId": 58,
       "pos": [
-        109,
-        2
+        112,
+        1
       ]
     },
     {
@@ -1123,6 +1119,7 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 1,
       "data": {
         "format": "wav",
         "path": "D:\\Documents\\GitHub\\gitshow12/recording.wav",
@@ -1156,15 +1153,15 @@
         },
         {
           "id": 3,
-          "value": 0.792000234
+          "value": 0.690000296
         },
         {
           "id": 4,
-          "value": 0.366999835
+          "value": 0.48999995
         },
         {
           "id": 5,
-          "value": 0.639999986
+          "value": 0.238000005
         },
         {
           "id": 6,
@@ -1214,7 +1211,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.910999596
+          "value": 0.381000012
         },
         {
           "id": 1,
@@ -1233,10 +1230,11 @@
           "value": 0.93503505
         }
       ],
+      "leftModuleId": 72,
       "rightModuleId": 64,
       "pos": [
-        99,
-        2
+        102,
+        1
       ]
     },
     {
@@ -1247,7 +1245,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 1,
@@ -1255,16 +1253,18 @@
         },
         {
           "id": 2,
-          "value": 0.0329999998
+          "value": 0.693999708
         },
         {
           "id": 3,
           "value": 0.0774999708
         }
       ],
+      "leftModuleId": 43,
+      "rightModuleId": 32,
       "pos": [
-        60,
-        0
+        59,
+        1
       ]
     },
     {
@@ -1275,7 +1275,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.39899981
+          "value": 0.470999986
         },
         {
           "id": 1,
@@ -1294,9 +1294,10 @@
           "value": 0.773235679
         }
       ],
-      "rightModuleId": 58,
+      "leftModuleId": 2,
+      "rightModuleId": 70,
       "pos": [
-        93,
+        92,
         1
       ]
     },
@@ -1316,7 +1317,7 @@
         },
         {
           "id": 2,
-          "value": -0.413005292
+          "value": -7.32500172
         },
         {
           "id": 3,
@@ -1335,8 +1336,9 @@
           "value": 0.0
         }
       ],
+      "leftModuleId": 63,
       "pos": [
-        133,
+        95,
         2
       ]
     }
@@ -1455,14 +1457,6 @@
       "color": "#0c8e15"
     },
     {
-      "id": 437,
-      "outputModuleId": 48,
-      "outputId": 0,
-      "inputModuleId": 46,
-      "inputId": 1,
-      "color": "#0986ad"
-    },
-    {
       "id": 434,
       "outputModuleId": 46,
       "outputId": 1,
@@ -1493,14 +1487,6 @@
       "inputModuleId": 44,
       "inputId": 0,
       "color": "#0986ad"
-    },
-    {
-      "id": 442,
-      "outputModuleId": 48,
-      "outputId": 1,
-      "inputModuleId": 27,
-      "inputId": 0,
-      "color": "#c91847"
     },
     {
       "id": 410,
