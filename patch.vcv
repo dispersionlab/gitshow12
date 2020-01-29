@@ -32,7 +32,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 0.00300000003
         },
         {
           "id": 1,
@@ -109,7 +109,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.781989992
+          "value": 0.499989986
         },
         {
           "id": 1,
@@ -156,7 +156,6 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 68,
       "rightModuleId": 30,
       "data": {
         "path": "/Users/lorenasalome/Documents/DigMediaYorkU/VSL/gitshow12/module.js",
@@ -217,11 +216,11 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": -2.0
         },
         {
           "id": 1,
-          "value": 3.48219299
+          "value": -7.59999943
         },
         {
           "id": 2,
@@ -241,7 +240,7 @@
         },
         {
           "id": 6,
-          "value": -9.85886574
+          "value": 9.8211422
         },
         {
           "id": 7,
@@ -252,7 +251,7 @@
       "rightModuleId": 63,
       "data": {
         "lissajous": 0,
-        "external": 0
+        "external": 1
       },
       "pos": [
         73,
@@ -267,7 +266,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.815499902
+          "value": 0.527499855
         },
         {
           "id": 1,
@@ -364,11 +363,11 @@
         },
         {
           "id": 2,
-          "value": -35.0460052
+          "value": -41.0400085
         },
         {
           "id": 3,
-          "value": -0.122999839
+          "value": 0.867000103
         },
         {
           "id": 4,
@@ -649,7 +648,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 0.839999855
         },
         {
           "id": 1,
@@ -848,11 +847,11 @@
       "params": [
         {
           "id": 0,
-          "value": 0.98999995
+          "value": 0.960003734
         },
         {
           "id": 1,
-          "value": 0.913331985
+          "value": -3.07000113
         },
         {
           "id": 2,
@@ -860,7 +859,7 @@
         },
         {
           "id": 3,
-          "value": 0.725274563
+          "value": 0.0562745966
         },
         {
           "id": 4,
@@ -894,7 +893,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.414000034
+          "value": 0.0
         },
         {
           "id": 1,
@@ -928,15 +927,15 @@
       "params": [
         {
           "id": 0,
-          "value": 180.0
+          "value": 40.0
         },
         {
           "id": 1,
-          "value": -13.0
+          "value": -23.0
         },
         {
           "id": 2,
-          "value": 0.0
+          "value": -2.0
         },
         {
           "id": 3,
@@ -944,7 +943,7 @@
         },
         {
           "id": 4,
-          "value": 0.315579891
+          "value": -0.179420158
         },
         {
           "id": 5,
@@ -960,7 +959,7 @@
         },
         {
           "id": 8,
-          "value": 0.722112834
+          "value": 0.16599983
         },
         {
           "id": 9,
@@ -1015,7 +1014,7 @@
         "bpmDetectionMode": false,
         "restartOnStopStartRun": 0,
         "sendResetOnRestart": false,
-        "ppqn": 4,
+        "ppqn": 2,
         "resetClockOutputsHigh": true,
         "momentaryRunInput": true
       },
@@ -1032,11 +1031,11 @@
       "params": [
         {
           "id": 0,
-          "value": 1.46999955
+          "value": 2.33999801
         },
         {
           "id": 1,
-          "value": -1.0999999
+          "value": -2.11000061
         },
         {
           "id": 2,
@@ -1078,7 +1077,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 0.258000672
         },
         {
           "id": 1,
@@ -1192,14 +1191,13 @@
           "value": 0.0
         }
       ],
-      "rightModuleId": 17,
       "data": {
         "playback": 0,
         "quality": 0,
         "blendMode": 0
       },
       "pos": [
-        40,
+        39,
         2
       ]
     },
@@ -1211,7 +1209,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.381000012
+          "value": 0.236999974
         },
         {
           "id": 1,
@@ -1245,19 +1243,19 @@
       "params": [
         {
           "id": 0,
-          "value": 1.0
+          "value": 0.511500061
         },
         {
           "id": 1,
-          "value": 1.0
+          "value": 0.0
         },
         {
           "id": 2,
-          "value": 0.693999708
+          "value": 0.0
         },
         {
           "id": 3,
-          "value": 0.0774999708
+          "value": 0.456999898
         }
       ],
       "leftModuleId": 43,
@@ -1275,7 +1273,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.470999986
+          "value": 0.0
         },
         {
           "id": 1,
@@ -1309,15 +1307,15 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
-        },
-        {
-          "id": 1,
           "value": 1.0
         },
         {
+          "id": 1,
+          "value": 0.0
+        },
+        {
           "id": 2,
-          "value": -7.32500172
+          "value": 5.21199226
         },
         {
           "id": 3,
@@ -1329,16 +1327,123 @@
         },
         {
           "id": 5,
-          "value": 0.5
+          "value": 0.776360452
+        },
+        {
+          "id": 6,
+          "value": 0.0255000014
+        }
+      ],
+      "leftModuleId": 63,
+      "pos": [
+        95,
+        2
+      ]
+    },
+    {
+      "id": 76,
+      "plugin": "squinkylabs-plug1",
+      "version": "1.0.6",
+      "model": "squinkylabs-shp",
+      "params": [
+        {
+          "id": 0,
+          "value": 3.0
+        },
+        {
+          "id": 1,
+          "value": -1.88999534
+        },
+        {
+          "id": 2,
+          "value": 0.0390000045
+        },
+        {
+          "id": 3,
+          "value": -2.74999881
+        },
+        {
+          "id": 4,
+          "value": -0.129000008
+        },
+        {
+          "id": 5,
+          "value": 1.0
         },
         {
           "id": 6,
           "value": 0.0
         }
       ],
-      "leftModuleId": 63,
       "pos": [
-        95,
+        115,
+        2
+      ]
+    },
+    {
+      "id": 77,
+      "plugin": "StellareModular",
+      "version": "1.0.0",
+      "model": "TuringMachine",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.609500051
+        },
+        {
+          "id": 1,
+          "value": 0.66200006
+        },
+        {
+          "id": 2,
+          "value": 0.5
+        },
+        {
+          "id": 3,
+          "value": 0.5
+        },
+        {
+          "id": 4,
+          "value": 0.594500124
+        },
+        {
+          "id": 5,
+          "value": 0.0780000016
+        },
+        {
+          "id": 6,
+          "value": 5.0
+        },
+        {
+          "id": 7,
+          "value": 1.0
+        },
+        {
+          "id": 8,
+          "value": 0.0
+        },
+        {
+          "id": 9,
+          "value": 0.0
+        },
+        {
+          "id": 10,
+          "value": 0.0
+        },
+        {
+          "id": 11,
+          "value": 0.0
+        },
+        {
+          "id": 12,
+          "value": 0.0
+        }
+      ],
+      "data": {
+        "pulses_mode": 0
+      },
+      "pos": [
+        12,
         2
       ]
     }
@@ -1625,22 +1730,6 @@
       "color": "#c9b70e"
     },
     {
-      "id": 515,
-      "outputModuleId": 63,
-      "outputId": 0,
-      "inputModuleId": 64,
-      "inputId": 4,
-      "color": "#c9b70e"
-    },
-    {
-      "id": 516,
-      "outputModuleId": 63,
-      "outputId": 1,
-      "inputModuleId": 64,
-      "inputId": 3,
-      "color": "#0c8e15"
-    },
-    {
       "id": 508,
       "outputModuleId": 68,
       "outputId": 0,
@@ -1693,22 +1782,6 @@
       "outputModuleId": 50,
       "outputId": 2,
       "inputModuleId": 57,
-      "inputId": 5,
-      "color": "#0c8e15"
-    },
-    {
-      "id": 510,
-      "outputModuleId": 50,
-      "outputId": 2,
-      "inputModuleId": 68,
-      "inputId": 1,
-      "color": "#0986ad"
-    },
-    {
-      "id": 521,
-      "outputModuleId": 50,
-      "outputId": 3,
-      "inputModuleId": 63,
       "inputId": 5,
       "color": "#0c8e15"
     },
@@ -1777,12 +1850,76 @@
       "color": "#c9b70e"
     },
     {
+      "id": 515,
+      "outputModuleId": 76,
+      "outputId": 1,
+      "inputModuleId": 64,
+      "inputId": 4,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 516,
+      "outputModuleId": 76,
+      "outputId": 0,
+      "inputModuleId": 64,
+      "inputId": 3,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 538,
+      "outputModuleId": 61,
+      "outputId": 0,
+      "inputModuleId": 77,
+      "inputId": 0,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 521,
+      "outputModuleId": 77,
+      "outputId": 5,
+      "inputModuleId": 63,
+      "inputId": 5,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 510,
+      "outputModuleId": 77,
+      "outputId": 2,
+      "inputModuleId": 68,
+      "inputId": 1,
+      "color": "#0986ad"
+    },
+    {
       "id": 535,
       "outputModuleId": 75,
       "outputId": 0,
-      "inputModuleId": 64,
+      "inputModuleId": 76,
       "inputId": 0,
       "color": "#0c8e15"
+    },
+    {
+      "id": 542,
+      "outputModuleId": 46,
+      "outputId": 0,
+      "inputModuleId": 76,
+      "inputId": 1,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 543,
+      "outputModuleId": 63,
+      "outputId": 0,
+      "inputModuleId": 76,
+      "inputId": 2,
+      "color": "#0986ad"
+    },
+    {
+      "id": 544,
+      "outputModuleId": 63,
+      "outputId": 1,
+      "inputModuleId": 76,
+      "inputId": 3,
+      "color": "#c9b70e"
     }
   ]
 }
