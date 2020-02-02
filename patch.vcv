@@ -12,7 +12,6 @@
       "data": {
         "audio": {
           "driver": 6,
-          "deviceName": "Speakers (Realtek(R) Audio)",
           "offset": 0,
           "maxChannels": 8,
           "sampleRate": 96000,
@@ -20,8 +19,8 @@
         }
       },
       "pos": [
-        132,
-        1
+        131,
+        2
       ]
     },
     {
@@ -53,8 +52,8 @@
       ],
       "rightModuleId": 72,
       "pos": [
-        82,
-        1
+        81,
+        2
       ]
     },
     {
@@ -85,8 +84,8 @@
         }
       ],
       "pos": [
-        10,
-        1
+        9,
+        2
       ]
     },
     {
@@ -97,8 +96,8 @@
       "params": [],
       "text": "patch instructions:\n\n1. Choose an audio driver and device in the AUDIO-8 module.\n\n2. Drag knobs up/down. Hold Ctrl (Cmd on Mac) while dragging to fine-tune. Right-click knobs to edit, or double-click to initialize.\n\n3. Drag ports to create and move 3ables. Stack multiple cables on outputs by holding Ctrl (Cmd on Mac) and dragging from an output.\n\n4. Right-click on an empty rack space to add new modules.",
       "pos": [
-        120,
-        0
+        119,
+        1
       ]
     },
     {
@@ -163,8 +162,8 @@
         "script": "\nconfig.frameDivider = 1\n// set buffersize of module\nconfig.bufferSize = 16\n\nvar phase = 0\nvar amp = 1\nvar mix;\nvar bias_cv\n// clamp a number to within a range\nlet clampNumber = (num, a, b) => Math.max(Math.min(num, Math.max(a, b)), Math.min(a, b));\n\n// this is where the synthesis calculation occurs\nfunction process(block) {\n    // block.knobs[0] = 0.5\n\t// Knob ranges from -5 to 5 octaves\n\t// var pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n    // pitch += block.inputs[0][0]\n    \n    // input 2 on the prototype module corresponds to the 2nd index of the block.inputs array, i.e. block.inputs[1]\n    amp = block.inputs[1][0]\n\n    // compare the amplitude of the two signal inputs\n    compare = [block.inputs[0][0], block.inputs[1][0]]\n    // get the max\n    max = Math.max(...compare)\n    // get the min\n    min = Math.min(...compare)\n\n    // the 1st knob on the prototype module will affect the biasing between input 1 or 2    \n    var bias = block.knobs[0] * 2 - 1\n    \n    // bias_cv += bias * Math.pow(2, block.inputs[2][0]);\n    if(bias < 0.){\n        mix = clampNumber( ((Math.abs(bias) * min) + (bias * max) * max * block.inputs[2][0]), -10., 10.)\n    } else if (bias > 0.){\n        mix = clampNumber( ((bias * max) + ((bias * -1) * min) * min * block.inputs[2][0]), -10., 10.)\n    }\n\n    var freq = 1\n\t//display(\"Freq: \" + freq.toFixed(3) + \" Hz\")\n\n\t// Set all samples in output buffer: this is where each sample is calculated, hence the for...loop. \n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n        phase %= 1\n        // this is like the console.log output of the prototype module. unfortunately it only displays a single concatenated string. \n        display(\"Logic Module: max, min, mix\" + mix)\n        \n\t\t// Convert phase to sine output\n        //block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5 * amp\n        block.outputs[0][i] = max\n        block.outputs[1][i] = min\n        block.outputs[2][i] = mix\n\t}\n}\n"
       },
       "pos": [
-        58,
-        2
+        57,
+        3
       ]
     },
     {
@@ -205,8 +204,8 @@
       "leftModuleId": 46,
       "rightModuleId": 44,
       "pos": [
-        33,
-        1
+        32,
+        2
       ]
     },
     {
@@ -255,8 +254,8 @@
         "external": 0
       },
       "pos": [
-        73,
-        2
+        72,
+        3
       ]
     },
     {
@@ -284,8 +283,8 @@
       ],
       "leftModuleId": 71,
       "pos": [
-        67,
-        1
+        66,
+        2
       ]
     },
     {
@@ -314,8 +313,8 @@
       "leftModuleId": 44,
       "rightModuleId": 71,
       "pos": [
-        51,
-        1
+        50,
+        2
       ]
     },
     {
@@ -344,8 +343,8 @@
       "leftModuleId": 27,
       "rightModuleId": 43,
       "pos": [
-        43,
-        1
+        42,
+        2
       ]
     },
     {
@@ -385,8 +384,8 @@
       ],
       "rightModuleId": 27,
       "pos": [
-        23,
-        1
+        22,
+        2
       ]
     },
     {
@@ -476,8 +475,6 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 61,
-      "rightModuleId": 53,
       "data": {
         "panelTheme": 0,
         "running": true,
@@ -490,8 +487,8 @@
         "momentaryRunInput": true
       },
       "pos": [
-        20,
-        0
+        0,
+        1
       ]
     },
     {
@@ -637,8 +634,8 @@
         "outputSaturation": 1
       },
       "pos": [
-        78,
-        0
+        77,
+        1
       ]
     },
     {
@@ -676,15 +673,14 @@
           "value": 0.0
         }
       ],
-      "leftModuleId": 50,
       "rightModuleId": 57,
       "data": {
         "lastPath": "D:\\Music\\Amen Break.wav",
         "oscstate": 1
       },
       "pos": [
-        40,
-        0
+        39,
+        1
       ]
     },
     {
@@ -836,8 +832,8 @@
         "mk2": true
       },
       "pos": [
-        58,
-        0
+        57,
+        1
       ]
     },
     {
@@ -882,8 +878,8 @@
         "oscstate": 1
       },
       "pos": [
-        49,
-        0
+        48,
+        1
       ]
     },
     {
@@ -916,8 +912,8 @@
       "leftModuleId": 64,
       "rightModuleId": 1,
       "pos": [
-        122,
-        1
+        121,
+        2
       ]
     },
     {
@@ -1007,7 +1003,6 @@
           "value": 0.0
         }
       ],
-      "rightModuleId": 50,
       "data": {
         "panelTheme": 0,
         "running": true,
@@ -1066,8 +1061,8 @@
         "oscstate": 1
       },
       "pos": [
-        86,
-        2
+        85,
+        3
       ]
     },
     {
@@ -1100,8 +1095,8 @@
       "leftModuleId": 70,
       "rightModuleId": 58,
       "pos": [
-        112,
-        1
+        111,
+        2
       ]
     },
     {
@@ -1129,8 +1124,8 @@
         "bitRate": 320000
       },
       "pos": [
-        142,
-        1
+        141,
+        2
       ]
     },
     {
@@ -1199,8 +1194,8 @@
         "blendMode": 0
       },
       "pos": [
-        40,
-        2
+        39,
+        3
       ]
     },
     {
@@ -1233,8 +1228,8 @@
       "leftModuleId": 72,
       "rightModuleId": 64,
       "pos": [
-        102,
-        1
+        101,
+        2
       ]
     },
     {
@@ -1263,8 +1258,8 @@
       "leftModuleId": 43,
       "rightModuleId": 32,
       "pos": [
-        59,
-        1
+        58,
+        2
       ]
     },
     {
@@ -1297,8 +1292,8 @@
       "leftModuleId": 2,
       "rightModuleId": 70,
       "pos": [
-        92,
-        1
+        91,
+        2
       ]
     },
     {
@@ -1338,8 +1333,8 @@
       ],
       "leftModuleId": 63,
       "pos": [
-        95,
-        2
+        94,
+        3
       ]
     }
   ],
