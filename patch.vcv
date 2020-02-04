@@ -111,7 +111,7 @@
       "params": [
         {
           "id": 0,
-          "value": 30.0
+          "value": 120.0
         },
         {
           "id": 1,
@@ -2036,6 +2036,7 @@
         }
       ],
       "leftModuleId": 111,
+      "rightModuleId": 136,
       "pos": [
         82,
         1
@@ -2247,6 +2248,30 @@
         110,
         0
       ]
+    },
+    {
+      "id": 136,
+      "plugin": "cf",
+      "version": "1.1.1",
+      "model": "MASTER",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.990000129
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        }
+      ],
+      "leftModuleId": 121,
+      "data": {
+        "onstate": 1
+      },
+      "pos": [
+        92,
+        1
+      ]
     }
   ],
   "cables": [
@@ -2321,14 +2346,6 @@
       "inputModuleId": 77,
       "inputId": 6,
       "color": "#0986ad"
-    },
-    {
-      "id": 722,
-      "outputModuleId": 97,
-      "outputId": 0,
-      "inputModuleId": 1,
-      "inputId": 0,
-      "color": "#c9b70e"
     },
     {
       "id": 726,
@@ -2409,14 +2426,6 @@
       "inputModuleId": 84,
       "inputId": 1,
       "color": "#0986ad"
-    },
-    {
-      "id": 744,
-      "outputModuleId": 121,
-      "outputId": 0,
-      "inputModuleId": 1,
-      "inputId": 1,
-      "color": "#0c8e15"
     },
     {
       "id": 694,
@@ -2729,6 +2738,38 @@
       "inputModuleId": 67,
       "inputId": 2,
       "color": "#c9b70e"
+    },
+    {
+      "id": 744,
+      "outputModuleId": 121,
+      "outputId": 0,
+      "inputModuleId": 136,
+      "inputId": 2,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 722,
+      "outputModuleId": 97,
+      "outputId": 0,
+      "inputModuleId": 136,
+      "inputId": 3,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 817,
+      "outputModuleId": 136,
+      "outputId": 2,
+      "inputModuleId": 1,
+      "inputId": 0,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 818,
+      "outputModuleId": 136,
+      "outputId": 3,
+      "inputModuleId": 1,
+      "inputId": 1,
+      "color": "#0c8e15"
     }
   ]
 }

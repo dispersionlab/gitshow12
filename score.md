@@ -1,6 +1,22 @@
-While the previous version of this patch used samples of human voices, I deiced to replace these samples with the most commonly sampled piece of music[1], the drum break from Amen, Brother. Alongside experimentation with synthesizers during this class, I decided to read into the histories of some of the genres of music I was attempting to emulate. That particular sample, having been so widely used, and so influential, seemed like a fitting choice for the further experimentation I undertook with this weeks assigned patch.
+####Reference: Indescribable rhythm
 
-The synthesizer is played through the control of the row of mixer modules in the centre right of the patch. The modules are chained together, so that raising the gain of one has a knock-on effect of increasing the other one. The mixers have been organized so that the sounds with the most reverberation and distortion are always brought to the front of the piece. Another form of control are the dials of the black reverberation modules. These effect the distortion of the sped up sample, letting the player choose to have the original music  show through more or less. 
+#####Description:
 
+I integrated all the controllers to the 6 peaks in the upper right corner to control the instrument. The first four correspond to different sounds, and the last two can change the sound.
 
-[1] Otzen, Ellen. “Six Seconds That Shaped 1,500 Songs.” BBC News. BBC, March 29, 2015. https://www.bbc.com/news/magazine-32087287. 
+<img src= "https://drive.google.com/uc?export=view&id=1qgmxFZ4S92txAo4HiCj3XpftXsHkG78p">
+
+> In the beginning, turn the first peak to 5, and the fourth peak to 0.2,
+> Set clocked to 90
+> 
+> The 2nd and 4th peaks are adjusted to 2 and the 5th peak is adjusted to 3,
+> 
+> Clocked to 120,
+> 
+> The 4th peak is adjusted to 5, the 6th peak is adjusted to 6,
+> 
+> The 5th and 6th are adjusted to the maximum, the second is adjusted to 2
+> 
+> 5th and 6th to 0, 2nd to 2
+> 
+> Finally, slowly adjust the peak to 0 in the order of 3, 2, 1, 4
